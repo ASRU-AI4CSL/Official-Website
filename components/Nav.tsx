@@ -1,6 +1,7 @@
 'use client'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
+import { useRef, useState } from 'react'
 import { DateUtils } from '../lib/dates'
 import externalUrls from '../data/externalurl.json'
 
@@ -19,6 +20,21 @@ export default function Nav() {
   const submission = DateUtils.getSubmissionDeadline()
   const nextBadge = submission ? `${submission.title}: ${DateUtils.formatDateShort(submission.date)}` : 'Dates'
   const peopleActive = pathname === '/speakers' || pathname === '/organizers'
+  const [peopleOpen, setPeopleOpen] = useState(false)
+  const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null)
+
+  const handlePeopleEnter = () => {
+    if (closeTimer.current) {
+      clearTimeout(closeTimer.current)
+      closeTimer.current = null
+    }
+    setPeopleOpen(true)
+  }
+
+  const handlePeopleLeave = () => {
+    if (closeTimer.current) clearTimeout(closeTimer.current)
+    closeTimer.current = setTimeout(() => setPeopleOpen(false), 200)
+  }
   
   return (
     <div className="nav">
@@ -43,17 +59,31 @@ export default function Nav() {
               </Link>
             ))}
             {/* Peoples dropdown */}
-            <div className="relative group">
-              <button className={`nav-link whitespace-nowrap flex items-center gap-1 ${peopleActive ? 'active' : ''}`}>
+            <div 
+              className="relative"
+              onMouseEnter={handlePeopleEnter}
+              onMouseLeave={handlePeopleLeave}
+            >
+              <button 
+                className={`nav-link whitespace-nowrap flex items-center gap-1 ${peopleActive ? 'active' : ''}`}
+                aria-haspopup="true"
+                aria-expanded={peopleOpen}
+                onClick={() => setPeopleOpen(o => !o)}
+              >
                 Peoples
                 <svg className="w-3.5 h-3.5" viewBox="0 0 20 20" fill="currentColor" aria-hidden>
                   <path fillRule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 10.94l3.71-3.71a.75.75 0 011.08 1.04l-4.25 4.25a.75.75 0 01-1.06 0L5.21 8.27a.75.75 0 01.02-1.06z" clipRule="evenodd" />
                 </svg>
               </button>
-              <div className="absolute left-0 mt-2 hidden group-hover:block bg-white border border-gray-200 rounded-lg shadow-lg min-w-[180px] z-50">
-                <div className="py-1">
+              <div className={`absolute left-0 top-full ${peopleOpen ? 'block' : 'hidden'} z-50 pt-2`}
+                   onMouseEnter={handlePeopleEnter}
+                   onMouseLeave={handlePeopleLeave}
+              >
+                <div className="bg-white border border-gray-200 rounded-lg shadow-lg min-w-[180px]">
+                  <div className="py-1">
                   <Link href="/speakers" className={`block px-4 py-2 text-sm hover:bg-gray-50 ${pathname === '/speakers' ? 'text-orange-600 font-semibold' : 'text-gray-700'}`}>Speakers</Link>
                   <Link href="/organizers" className={`block px-4 py-2 text-sm hover:bg-gray-50 ${pathname === '/organizers' ? 'text-orange-600 font-semibold' : 'text-gray-700'}`}>Organizers</Link>
+                  </div>
                 </div>
               </div>
             </div>

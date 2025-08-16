@@ -1,4 +1,5 @@
 import Hero from '../../../components/Hero'
+import externalUrls from '../../../data/externalurl.json'
 
 export const metadata = { title: 'Code of Conduct — Child Speech AI Workshop' }
 
@@ -44,7 +45,7 @@ export default function Page() {
             <h2 className="text-2xl font-bold text-gray-900 mb-3">Reporting</h2>
             <p className="text-gray-700">
               If you experience or witness a violation, contact the organizers at
-              {' '}<a href="mailto:organizers@childspeechai.org" className="text-orange-700 underline">organizers@childspeechai.org</a> or speak to a staff member on site. All reports will be handled promptly and confidentially.
+              {' '}<a href={`mailto:${(externalUrls as any).contactEmail}`} className="text-orange-700 underline">{(externalUrls as any).contactEmail}</a> or speak to a staff member on site. All reports will be handled promptly and confidentially.
             </p>
           </div>
 
@@ -65,4 +66,3 @@ export default function Page() {
     </>
   )
 }
-

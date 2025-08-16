@@ -1,6 +1,7 @@
 import Hero from '../../../components/Hero'
 import ImportantDates from '../../../components/ImportantDates'
 import { IMPORTANT_DATES } from '../../../lib/dates'
+import externalUrls from '../../../data/externalurl.json'
 
 export const metadata = { title: 'CFP — Child Speech AI Workshop' }
 
@@ -148,6 +149,27 @@ export default function Page() {
                 </li>
               </ul>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Submit Paper CTA */}
+      <section className="py-12 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">Ready to submit?</h2>
+            <p className="text-gray-600 mb-6">Follow the instructions above, then submit your paper via the link below.</p>
+            <a
+              className="btn-conference-primary inline-flex items-center gap-2"
+              href={(externalUrls as any).submitPaper}
+              target={(externalUrls as any).submitPaper?.startsWith('http') ? '_blank' : undefined}
+              rel={(externalUrls as any).submitPaper?.startsWith('http') ? 'noopener' : undefined}
+            >
+              Submit Paper
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </a>
           </div>
         </div>
       </section>

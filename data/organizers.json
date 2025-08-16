@@ -8,7 +8,7 @@
       "description": "Status: Confirmed",
       "email": "mailto:placeholder@example.com",
       "website": "#",
-      "image": "/images/hero/child-speech-hero.jpeg"
+      "image": "https://drive.google.com/uc?export=view&id=1V4KtjBjNNiHG_-vnBUww3o37P0LAPZ3p"
     },
     {
       "name": "Haolong Zheng",
@@ -17,7 +17,7 @@
       "description": "Status: Confirmed",
       "email": "mailto:placeholder@example.com",
       "website": "#",
-      "image": "/images/organizers/HaolongZheng.jpg"
+      "image": "https://drive.google.com/file/d/1pEt2eR6RjlY1mjW062_x5MNa-LmJdjPy/view?usp=drive_link"
     },
     {
       "name": "Xulin Fan",
@@ -26,7 +26,7 @@
       "description": "Status: Confirmed",
       "email": "mailto:placeholder@example.com",
       "website": "#",
-      "image": "/images/organizers/XulinFan.png"
+      "image": "https://drive.google.com/file/d/1NaXIOlr12NeaD9BygXGed-RSE1l1UShs/view?usp=drive_link"
     },
     {
       "name": "Bashima Islam",
@@ -35,7 +35,7 @@
       "description": "Status: Confirmed",
       "email": "mailto:placeholder@example.com",
       "website": "#",
-      "image": "/images/organizers/BashimaIslam.png"
+      "image": "https://drive.google.com/file/d/1ZUxVYeeMMiea5H_6KgUbIiwuK2W2D4G-/view?usp=drive_link"
     },
     {
       "name": "Jinjun Xiong",
@@ -44,7 +44,7 @@
       "description": "Status: Confirmed",
       "email": "mailto:placeholder@example.com",
       "website": "#",
-      "image": "/images/organizers/20240212_JinjunXiong.png"
+      "image": "https://drive.google.com/file/d/1FJ6I70fXc9un6ckcDXnKbWKKCuD9H02A/view?usp=drive_link"
     },
     {
       "name": "Jialu Li",
@@ -53,7 +53,7 @@
       "description": "Status: Confirmed",
       "email": "mailto:placeholder@example.com",
       "website": "#",
-      "image": "/images/hero/child-speech-hero.jpeg"
+      "image": "https://drive.google.com/file/d/1FmdIrpefHJ8AMH6zIzEVaWN2014vYVZu/view?usp=drive_link"
     },
     {
       "name": "Jiachen Lian",
@@ -62,7 +62,7 @@
       "description": "Status: Confirmed",
       "email": "mailto:placeholder@example.com",
       "website": "#",
-      "image": "/images/hero/child-speech-hero.jpeg"
+      "image": "https://drive.google.com/file/d/1MBRiSu9c1sd7ULRSPLpfUEz6dPD9QcrX/view?usp=drive_link"
     },
     {
       "name": "Anna Seo Gyeong Choi",
@@ -71,7 +71,7 @@
       "description": "Status: Confirmed",
       "email": "mailto:placeholder@example.com",
       "website": "#",
-      "image": "/images/hero/child-speech-hero.jpeg"
+      "image": "https://drive.google.com/file/d/1MBRiSu9c1sd7ULRSPLpfUEz6dPD9QcrX/view?usp=drive_link"
     },
     {
       "name": "Mohammad Nur Hossain Khan",
@@ -80,7 +80,7 @@
       "description": "Status: Confirmed",
       "email": "mailto:placeholder@example.com",
       "website": "#",
-      "image": "/images/hero/child-speech-hero.jpeg"
+      "image": "https://drive.google.com/file/d/1MBRiSu9c1sd7ULRSPLpfUEz6dPD9QcrX/view?usp=drive_link"
     }
   ],
   "programCommittee": [
@@ -91,7 +91,7 @@
       "description": "Status: Confirmed",
       "email": "mailto:placeholder@example.com",
       "website": "#",
-      "image": "/images/hero/child-speech-hero.jpeg"
+      "image": "https://drive.google.com/file/d/1MBRiSu9c1sd7ULRSPLpfUEz6dPD9QcrX/view?usp=drive_link"
     },
     {
       "name": "Haolong Zheng",
@@ -100,7 +100,7 @@
       "description": "Status: Confirmed",
       "email": "mailto:placeholder@example.com",
       "website": "#",
-      "image": "/images/organizers/HaolongZheng.jpg"
+      "image": "https://drive.google.com/file/d/1pEt2eR6RjlY1mjW062_x5MNa-LmJdjPy/view?usp=drive_link"
     },
     {
       "name": "Xulin Fan",
@@ -109,7 +109,7 @@
       "description": "Status: TBD",
       "email": "mailto:placeholder@example.com",
       "website": "#",
-      "image": "/images/organizers/XulinFan.png"
+      "image": "https://drive.google.com/file/d/1NaXIOlr12NeaD9BygXGed-RSE1l1UShs/view?usp=drive_link"
     },
     {
       "name": "Jialu Li",
@@ -118,7 +118,7 @@
       "description": "Status: Maybe",
       "email": "mailto:placeholder@example.com",
       "website": "#",
-      "image": "/images/organizers/JialuLi.png"
+      "image": "https://drive.google.com/file/d/1FmdIrpefHJ8AMH6zIzEVaWN2014vYVZu/view?usp=drive_link"
     },
     {
       "name": "Jiachen Lian",
@@ -127,7 +127,7 @@
       "description": "Status: In person",
       "email": "mailto:placeholder@example.com",
       "website": "#",
-      "image": "/images/hero/child-speech-hero.jpeg"
+      "image": "https://drive.google.com/file/d/1MBRiSu9c1sd7ULRSPLpfUEz6dPD9QcrX/view?usp=drive_link"
     },
     {
       "name": "Anna Seo Gyeong Choi",
@@ -136,7 +136,7 @@
       "description": "Status: Maybe",
       "email": "mailto:placeholder@example.com",
       "website": "#",
-      "image": "/images/hero/child-speech-hero.jpeg"
+      "image": "https://drive.google.com/file/d/1MBRiSu9c1sd7ULRSPLpfUEz6dPD9QcrX/view?usp=drive_link"
     },
     {
       "name": "Mohammad Nur Hossain Khan",
@@ -145,7 +145,7 @@
       "description": "Status: Confirmed",
       "email": "mailto:placeholder@example.com",
       "website": "#",
-      "image": "/images/hero/child-speech-hero.jpeg"
+      "image": "https://drive.google.com/file/d/1MBRiSu9c1sd7ULRSPLpfUEz6dPD9QcrX/view?usp=drive_link"
     },
     {
       "name": "Bashima Islam",
@@ -154,7 +154,7 @@
       "description": "Status: Confirmed",
       "email": "mailto:placeholder@example.com",
       "website": "#",
-      "image": "/images/hero/child-speech-hero.jpeg"
+      "image": "https://drive.google.com/file/d/1ZUxVYeeMMiea5H_6KgUbIiwuK2W2D4G-/view?usp=drive_link"
     }
   ],
   "advisoryBoard": [
@@ -165,14 +165,14 @@
       "description": "Status: In person",
       "email": "mailto:placeholder@example.com",
       "website": "#",
-      "image": "/images/hero/child-speech-hero.jpeg"
+      "image": "https://drive.google.com/file/d/1MBRiSu9c1sd7ULRSPLpfUEz6dPD9QcrX/view?usp=drive_link"
     },
     {
       "name": "Prof. John Smith",
       "title": "Professor",
       "affiliation": "Advisory Institute, US",
       "email": "mailto:john.smith@example.com",
-      "image": "/images/organizers/20240212_JinjunXiong.png"
+      "image": "https://drive.google.com/file/d/1FJ6I70fXc9un6ckcDXnKbWKKCuD9H02A/view?usp=drive_link"
     }
   ]
 }

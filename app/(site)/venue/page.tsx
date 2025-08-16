@@ -1,4 +1,6 @@
 import Hero from '../../../components/Hero'
+import ExternalImage from '../../../components/ExternalImage'
+import externalUrls from '../../../data/externalurl.json'
 
 export const metadata = { title: 'Venue — Child Speech AI Workshop' }
 
@@ -30,10 +32,12 @@ export default function Page() {
           <div className="flex flex-col lg:flex-row items-center gap-12">
             {/* Venue Image */}
             <div className="w-full lg:w-1/2">
-              <img
-                src="/images/venue/UOHM-F1.png"
+              <ExternalImage
+                src={(externalUrls as any).venueImage || 'https://drive.google.com/file/d/1MBRiSu9c1sd7ULRSPLpfUEz6dPD9QcrX/view?usp=drive_link'}
                 alt="University of Hawaii Campus"
                 className="w-full h-80 lg:h-96 object-cover rounded-xl shadow-xl"
+                width={1600}
+                height={900}
               />
             </div>
             

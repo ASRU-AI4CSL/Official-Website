@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import Hero from '../../../components/Hero'
+import ExternalImage from '../../../components/ExternalImage'
 import { scheduleEvents, speakers } from '../../../lib/speakers'
 import { workshopDate } from '../../../lib/dates'
 
@@ -36,10 +37,12 @@ export default function Page() {
 
               const ImageEl = displayImage ? (
                 <div>
-                  <img
+                  <ExternalImage
                     src={displayImage}
                     alt={displayTitle}
                     className={`w-full h-64 lg:h-96 object-cover rounded-xl shadow-xl ${isTalk ? 'transition-transform duration-200 group-hover:scale-[1.02]' : ''}`}
+                    width={1600}
+                    height={900}
                   />
                 </div>
               ) : <div />

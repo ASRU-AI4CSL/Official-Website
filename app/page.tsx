@@ -1,5 +1,8 @@
 import { eventJsonLd } from '../lib/seo'
 import { importantDates, workshopDate, registrationDates, DateUtils } from '../lib/dates'
+import externalUrls from '../data/externalurl.json'
+import { normalizeExternalImageUrl } from '../lib/images'
+import ExternalImage from '../components/ExternalImage'
 import ImportantDates from '../components/ImportantDates'
 
 export const metadata = {
@@ -8,6 +11,7 @@ export const metadata = {
 }
 
 export default function Page() {
+  const heroImage = normalizeExternalImageUrl((externalUrls as any).heroImage || '')
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(eventJsonLd()) }} />
@@ -15,7 +19,18 @@ export default function Page() {
       {/* Full-Width Hero Section - ASRU Inspired */}
       <section className="hero-fullwidth">
         {/* Background Image */}
-        <div className="hero-background"></div>
+        <div className="hero-background">
+          {heroImage && (
+            <ExternalImage
+              src={heroImage}
+              alt=""
+              fill
+              className="object-cover"
+              priority
+              sizes="100vw"
+            />
+          )}
+        </div>
         
         {/* Content Overlay */}
         <div className="hero-content">

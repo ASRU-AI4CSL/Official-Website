@@ -40,7 +40,7 @@
     "title": "Coffee & Networking Break",
     "description": "Refreshments and networking.",
     "room": "Lobby",
-    "image": "/images/schedule/Coffee.jpg"
+    "image": "https://drive.google.com/file/d/1GwxHA61_0gcHfU6GKGrq7NbSEDHgkchF/view?usp=drive_link"
   },
   {
     "time": "15:50–16:20",
@@ -67,7 +67,7 @@
     "title": "Poster Session",
     "description": "Poster presentations and discussion with presenters.",
     "room": "Main Hall",
-    "image": "/images/schedule/Poster.png"
+    "image": "https://drive.google.com/file/d/1-ho3J9pjPtpPEQj7HhjiO4gVLSmVSDBN/view?usp=drive_link"
   },
   {
     "time": "18:20–18:30",

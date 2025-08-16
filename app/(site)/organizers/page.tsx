@@ -1,5 +1,6 @@
 import Hero from '../../../components/Hero'
 import { getOrganizerSections, Organizer } from '../../../lib/organizers'
+import ExternalImage from '../../../components/ExternalImage'
 
 export const metadata = { title: 'Organizers — Child Speech AI Workshop' }
 
@@ -7,10 +8,12 @@ function OrganizerCard({ organizer }: { organizer: Organizer }) {
   return (
     <div className="bg-white rounded-xl p-3 shadow-md hover:shadow-lg transition-shadow duration-300 text-center w-[180px] h-56 flex flex-col">
       <div className="w-24 h-24 mx-auto mb-2 overflow-hidden rounded-full">
-        <img
+        <ExternalImage
           src={organizer.image}
           alt={organizer.name}
           className="w-full h-full object-cover"
+          width={256}
+          height={256}
         />
       </div>
       <div className="px-1 flex-1 flex flex-col">

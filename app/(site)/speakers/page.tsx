@@ -1,5 +1,6 @@
 import Hero from '../../../components/Hero'
 import { speakers } from '../../../lib/speakers'
+import ExternalImage from '../../../components/ExternalImage'
 
 export const metadata = { title: 'Speakers — Child Speech AI Workshop' }
 
@@ -20,10 +21,12 @@ export default function Page() {
               <div key={speaker.name} className="bg-white rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 overflow-hidden flex flex-col">
                 {/* Speaker Image */}
                 <div className="relative">
-                  <img 
+                  <ExternalImage 
                     src={speaker.image} 
                     alt={speaker.name}
                     className="w-full h-64 object-cover"
+                    width={1200}
+                    height={800}
                   />
                   {/* Role Badge */}
                   <div className="absolute top-4 left-4">

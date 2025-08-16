@@ -420,7 +420,8 @@ a:hover {
   left: 0;
   right: 0;
   bottom: 0;
-  background: url('/images/hero/child-speech-hero.jpeg');
+  /* Use direct-view Google Drive URL to ensure image loads as background */
+  background: url('https://drive.google.com/uc?export=view&id=1MBRiSu9c1sd7ULRSPLpfUEz6dPD9QcrX');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
