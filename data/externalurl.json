@@ -1,0 +1,9 @@
+{
+  "register": "#register",
+  "submitPaper": "https://openreview.net/",
+  "campusMap": "https://map.hawaii.edu/manoa/",
+  "visitorParking": "https://manoa.hawaii.edu/commuter/visitors/",
+  "hnlGroundTransportation": "https://airports.hawaii.gov/hnl/getting-to-from/ground-transportation/",
+  "hnlTheBus": "https://airports.hawaii.gov/hnl/getting-to-from/ground-transportation/the-bus/",
+  "accessibilityAtUh": "https://www.hawaii.edu/access/"
+}

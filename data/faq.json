@@ -1,0 +1,92 @@
+{
+  "categories": [
+    {
+      "title": "Registration & Participation",
+      "icon": "🎫",
+      "faqs": [
+        {
+          "q": "Is registration free?",
+          "a": "Yes! Participation in the Child Speech AI Workshop is completely free. Capacity may be limited; register early to secure your spot."
+        },
+        {
+          "q": "How do I register for the workshop?",
+          "a": "Use the online portal via the \"Register Free\" button on the homepage. You will receive a confirmation email with details."
+        },
+        {
+          "q": "What is the capacity limit?",
+          "a": "Due to venue constraints, we have limited in-person capacity. Registration is first-come, first-served."
+        },
+        {
+          "q": "Can I attend virtually?",
+          "a": "The workshop is primarily in person. Remote options may be granted for visa/travel difficulties or exceptional circumstances—contact the organizers."
+        }
+      ]
+    },
+    {
+      "title": "Submissions & Presentations",
+      "icon": "📝",
+      "faqs": [
+        {
+          "q": "What types of submissions are accepted?",
+          "a": "Short papers (3 pages) and regular papers (up to 6 pages) via OpenReview. Single-blind, non-archival, focused on child speech AI."
+        },
+        {
+          "q": "Are remote presentations allowed?",
+          "a": "In-person presentations are preferred. Remote options may be granted for visa/travel difficulties or exceptional circumstances—contact organizers early."
+        },
+        {
+          "q": "What is the submission deadline?",
+          "a": "See the Call for Papers page for the latest deadlines and formatting requirements."
+        },
+        {
+          "q": "Is the workshop recorded?",
+          "a": "Recording policy will be announced prior to the event. We will inform participants and obtain necessary permissions."
+        }
+      ]
+    },
+    {
+      "title": "Travel & Accommodation",
+      "icon": "✈️",
+      "faqs": [
+        {
+          "q": "Where is the workshop located?",
+          "a": "University of Hawai‘i at Mānoa campus, Honolulu, Hawai‘i. Specific room is TBD; see the Venue page for updates and directions."
+        },
+        {
+          "q": "Are there recommended hotels?",
+          "a": "Yes, we will list recommended hotels near campus (with any discounts) on the Venue page as details finalize."
+        },
+        {
+          "q": "How do I get from the airport to the venue?",
+          "a": "Daniel K. Inouye International Airport (HNL) is about 20–30 minutes by car. Options include ride-hail, taxi, TheBus, shuttles, and car rentals."
+        },
+        {
+          "q": "Is the venue accessible?",
+          "a": "Yes. The campus provides accessible routes and seating. Contact us with specific needs so we can coordinate accommodations."
+        }
+      ]
+    },
+    {
+      "title": "Technical & Content",
+      "icon": "🤖",
+      "faqs": [
+        {
+          "q": "What topics will be covered?",
+          "a": "Child speech AI: ASR for children, speech development, fairness and bias, evaluation, ethics, and interactive learning."
+        },
+        {
+          "q": "Who should attend this workshop?",
+          "a": "Researchers, practitioners, and students in speech processing, child language, AI ethics, educational technology, and related fields."
+        },
+        {
+          "q": "Will presentation materials be available?",
+          "a": "Yes, slides/materials will be shared with registered participants after the workshop, subject to presenter approval."
+        },
+        {
+          "q": "Are there networking opportunities?",
+          "a": "Yes—networking breaks, poster sessions, and social time are planned to connect attendees, speakers, and organizers."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+[
+  {
+    "slug": "abeer-alwan",
+    "name": "Abeer Alwan",
+    "affiliation": "UCLA",
+    "role": "Keynote Speaker",
+    "image": "/images/organizers/20240212_JinjunXiong.png",
+    "website": "#",
+    "talkTitle": "Keynote: [TBD]",
+    "talkDescription": "Keynote address. Title to be announced.",
+    "time": "14:05–14:35",
+    "room": "Main Hall"
+  },
+  {
+    "slug": "mark-hasegawa-johnson",
+    "name": "Mark Hasegawa-Johnson",
+    "affiliation": "University of Illinois at Urbana-Champaign",
+    "role": "Invited Speaker",
+    "image": "/images/speakers/MarkHasegawaJohnson.png",
+    "website": "https://speechtechnology.web.illinois.edu/mark-a-hasegawa-johnson/",
+    "talkTitle": "Invited Talk 1 – [TBD]",
+    "talkDescription": "Invited talk. Title to be announced.",
+    "time": "14:35–15:05",
+    "room": "Main Hall"
+  },
+  {
+    "slug": "gopala-anumanchipalli",
+    "name": "Gopala Anumanchipalli",
+    "affiliation": "UC Berkeley",
+    "role": "Invited Speaker",
+    "image": "/images/hero/child-speech-hero.jpeg",
+    "website": "#",
+    "talkTitle": "Invited Talk 2 – [TBD]",
+    "talkDescription": "Invited talk. Title to be announced.",
+    "time": "15:05–15:35",
+    "room": "Main Hall"
+  },
+  {
+    "slug": "corey-miller",
+    "name": "Corey Miller",
+    "affiliation": "University of California",
+    "role": "Invited Speaker",
+    "image": "/images/hero/child-speech-hero.jpeg",
+    "website": "#",
+    "talkTitle": "Invited Talk 3 – [TBD]",
+    "talkDescription": "Invited talk. Title to be announced.",
+    "time": "15:50–16:20",
+    "room": "Main Hall"
+  },
+  {
+    "slug": "carol-espy-wilson",
+    "name": "Carol Espy-Wilson",
+    "affiliation": "University of Maryland",
+    "role": "Invited Speaker",
+    "image": "/images/hero/child-speech-hero.jpeg",
+    "website": "#",
+    "talkTitle": "Invited Talk 3 – [TBD]",
+    "talkDescription": "Invited talk. Title to be announced.",
+    "time": "15:50–16:20",
+    "room": "Main Hall"
+  },
+  {
+    "slug": "tiantian-feng",
+    "name": "Tiantian Feng",
+    "affiliation": "University of Southern California",
+    "role": "Invited Speaker",
+    "image": "/images/hero/child-speech-hero.jpeg",
+    "website": "#",
+    "talkTitle": "Invited Talk 4 – [TBD]",
+    "talkDescription": "Invited talk. Title to be announced.",
+    "time": "16:20–16:50",
+    "room": "Main Hall"
+  }
+]

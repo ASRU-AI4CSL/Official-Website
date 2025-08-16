@@ -1,117 +1,134 @@
-export const metadata = { title: 'Schedule — Child Speech AI Workshop' }
+import Link from 'next/link'
+import Hero from '../../../components/Hero'
+import { scheduleEvents, speakers } from '../../../lib/speakers'
+import { workshopDate } from '../../../lib/dates'
 
-const events = [
-  {
-    time: '14:00',
-    title: 'Opening Remarks',
-    speaker: 'Organizers',
-    room: 'Main Hall',
-    image: '/images/hero/child-speech-hero.jpeg',
-    description: 'Kick off the workshop with an introduction to goals and logistics.',
-  },
-  {
-    time: '14:10',
-    title: 'Invited Talk 1',
-    speaker: 'TBD',
-    room: 'Main Hall',
-    image: '/images/hero/child-speech-hero.jpeg',
-    description: 'Keynote address by a leading expert in child speech recognition.',
-  },
-  {
-    time: '15:00',
-    title: 'Contributed Talks',
-    room: 'Main Hall',
-    image: '/images/hero/child-speech-hero.jpeg',
-    description: 'Selected talks highlighting recent advances and challenges.',
-  },
-  {
-    time: '16:00',
-    title: 'Coffee Break',
-    room: 'Lobby',
-    image: '/images/hero/child-speech-hero.jpeg',
-    description: 'Refresh and network with fellow attendees over coffee.',
-  },
-  {
-    time: '16:30',
-    title: 'Poster Session',
-    room: 'Main Hall',
-    image: '/images/hero/child-speech-hero.jpeg',
-    description: 'Explore posters and discuss research with presenters.',
-  },
-  {
-    time: '18:00',
-    title: 'Closing',
-    room: 'Main Hall',
-    image: '/images/hero/child-speech-hero.jpeg',
-    description: 'Concluding remarks and future directions for child speech AI.',
-  },
-]
+export const metadata = { title: 'Schedule — Child Speech AI Workshop' }
 
 export default function Page() {
   return (
     <>
-      {/* Hero Section */}
-      <section className="py-16 bg-gradient-to-r from-orange-500 to-pink-500 text-white text-center">
-        <div className="container mx-auto px-4">
-          <h1 className="text-5xl font-bold mb-4">Workshop Schedule</h1>
-          <p className="max-w-2xl mx-auto text-lg">
-            Dec 10, 2025 (HST) — join us for a day of talks and sessions focused on advancing child speech AI technologies with fairness, precision, and interactive learning.
-          </p>
-        </div>
-      </section>
+      <Hero
+        title="Workshop Schedule"
+        subtitle={`${workshopDate.date} (${workshopDate.time}) — join us for a day of talks and sessions focused on advancing child speech AI technologies with fairness, precision, and interactive learning.`}
+        variant="indigoCyan"
+      />
 
-      {/* Events with Alternating Layout */}
+      {/* Events Timeline Style */}
       <section className="py-16">
         <div className="max-w-6xl mx-auto px-4">
-          {events.map((e, idx) => (
-            <div key={idx} className="mb-20 last:mb-0">
-              {/* Day Label */}
-              {idx === 0 && (
-                <div className="text-center mb-8">
-                  <span className="text-sm uppercase tracking-wide text-gray-500 font-semibold">
-                    DAY 1
-                  </span>
-                </div>
-              )}
-              
-              <div className={`flex flex-col lg:flex-row items-center gap-8 lg:gap-16 ${
-                idx % 2 === 1 ? 'lg:flex-row-reverse' : ''
-              }`}>
-                {/* Image */}
-                <div className="w-full lg:w-1/2">
+          <div className="relative">
+            <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 w-px bg-gray-200" />
+            {scheduleEvents.map((e, idx) => {
+              const isTalk = e.type === 'talk' || e.type === 'keynote'
+              const speakerCandidates = (e.speaker || '')
+                .split(/\s+or\s+/i)
+                .map(s => s.trim())
+                .filter(Boolean)
+              const speakerData = isTalk
+                ? speakers.find(s => speakerCandidates.includes(s.name))
+                : undefined
+              const displayTitle = isTalk && speakerData?.talkTitle ? speakerData.talkTitle : e.title
+              const displayDesc = isTalk && speakerData?.talkDescription ? speakerData.talkDescription : e.description
+              const displayImage = isTalk && speakerData?.image ? speakerData.image : e.image
+              const displaySpeaker = speakerData?.name || e.speaker
+              const displayAffiliation = speakerData?.affiliation
+
+              const ImageEl = displayImage ? (
+                <div>
                   <img
-                    src={e.image}
-                    alt={e.title}
-                    className="w-full h-64 lg:h-96 object-cover rounded-xl shadow-xl"
+                    src={displayImage}
+                    alt={displayTitle}
+                    className={`w-full h-64 lg:h-96 object-cover rounded-xl shadow-xl ${isTalk ? 'transition-transform duration-200 group-hover:scale-[1.02]' : ''}`}
                   />
                 </div>
-                
-                {/* Content */}
-                <div className={`w-full lg:w-1/2 ${idx % 2 === 1 ? 'text-center lg:text-right' : 'text-center lg:text-left'}`}>
+              ) : <div />
+
+              const ContentEl = (
+                <div className={`${idx % 2 === 1 ? 'text-center lg:text-right' : 'text-center lg:text-left'}`}>
                   <div className="inline-block bg-orange-100 text-orange-700 text-sm font-bold px-4 py-2 rounded-full mb-6 uppercase tracking-wide">
                     {e.time} · {e.room}
                   </div>
-                  
-                  <h2 className="text-3xl lg:text-5xl font-black text-gray-900 mb-6 leading-tight">
-                    {e.title}
+                  <h2 className="text-3xl lg:text-5xl font-black text-gray-900 mb-3 leading-tight">
+                    {displayTitle}
                   </h2>
-                  
-                  {e.speaker && (
-                    <p className="text-xl text-gray-800 mb-6 font-semibold">
-                      {e.speaker}
+                  {displaySpeaker && (
+                    <p className={`text-xl mb-1 font-semibold ${isTalk ? 'text-orange-700' : 'text-gray-800'}`}>
+                      {displaySpeaker}
                     </p>
                   )}
-                  
-                  <p className="text-gray-700 leading-relaxed text-lg lg:text-xl max-w-lg">
-                    {e.description}
+                  {displayAffiliation && (
+                    <p className="text-sm text-gray-600 mb-5">{displayAffiliation}</p>
+                  )}
+                  <p className="text-gray-700 leading-relaxed text-lg lg:text-xl max-w-lg mx-auto lg:mx-0">
+                    {displayDesc}
                   </p>
                 </div>
-              </div>
-            </div>
-          ))}
+              )
+
+              // Mobile stacked: image then content; Desktop: split across the center line
+              const ItemGrid = (
+                <>
+                  {/* Mobile stacked */}
+                  <div className="lg:hidden space-y-6">
+                    {ImageEl}
+                    {ContentEl}
+                  </div>
+                  {/* Desktop two columns with alternating sides */}
+                  <div className="hidden lg:grid lg:grid-cols-2 lg:gap-12 lg:items-center">
+                    {idx % 2 === 0 ? (
+                      <>
+                        <div>{ImageEl}</div>
+                        <div className="lg:text-left">{ContentEl}</div>
+                      </>
+                    ) : (
+                      <>
+                        <div className="lg:text-right">{ContentEl}</div>
+                        <div>{ImageEl}</div>
+                      </>
+                    )}
+                  </div>
+                </>
+              )
+
+              const Wrapped = isTalk ? (
+                <Link href="/speakers" className="block group focus:outline-none focus:ring-2 focus:ring-orange-400 rounded-xl">
+                  {ItemGrid}
+                </Link>
+              ) : ItemGrid
+
+              return (
+                <div key={idx} className="relative mb-10 lg:mb-14">
+
+                  {/* Center dot on desktop */}
+                  <div className={`hidden lg:flex items-center justify-center absolute left-1/2 -translate-x-1/2 top-3 w-4 h-4 rounded-full bg-white border-2 border-orange-400`} />
+
+                  {/* Mobile left-line + dot */}
+                  <div className="lg:hidden relative border-l border-gray-200 pl-4">
+                    <span className={`absolute -left-1.5 top-3 w-3 h-3 rounded-full bg-white border-2 border-orange-400`} />
+                    {Wrapped}
+                  </div>
+
+                  {/* Desktop alternating layout spanning both sides */}
+                  <div className="hidden lg:grid lg:grid-cols-2 lg:gap-12 lg:items-center">
+                    {idx % 2 === 0 ? (
+                      <>
+                        <div>{isTalk ? <Link href="/speakers" className="block group focus:outline-none">{ImageEl}</Link> : ImageEl}</div>
+                        <div className="lg:text-left">{isTalk ? <Link href="/speakers" className="block group focus:outline-none">{ContentEl}</Link> : ContentEl}</div>
+                      </>
+                    ) : (
+                      <>
+                        <div className="lg:text-right">{isTalk ? <Link href="/speakers" className="block group focus:outline-none">{ContentEl}</Link> : ContentEl}</div>
+                        <div>{isTalk ? <Link href="/speakers" className="block group focus:outline-none">{ImageEl}</Link> : ImageEl}</div>
+                      </>
+                    )}
+                  </div>
+                </div>
+              )
+            })}
+          </div>
         </div>
       </section>
     </>
   )
 }
-

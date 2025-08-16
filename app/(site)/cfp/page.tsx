@@ -1,154 +1,102 @@
+import Hero from '../../../components/Hero'
+import ImportantDates from '../../../components/ImportantDates'
+import { IMPORTANT_DATES } from '../../../lib/dates'
+
 export const metadata = { title: 'CFP — Child Speech AI Workshop' }
 
 export default function Page() {
   return (
     <>
-      {/* Hero Section */}
-      <section className="py-16 bg-gradient-to-br from-orange-400 via-orange-500 to-orange-600">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center text-white">
-            <h1 className="text-5xl lg:text-6xl font-black mb-6">Call For Papers</h1>
-            <p className="text-xl lg:text-2xl mb-8 leading-relaxed">
-              A call for papers invites researchers to submit their work to ASRU 2025 for presentation or publication, outlining topics, and deadlines.
-            </p>
-            <div className="flex justify-center">
-              <a href="https://openreview.net/" className="inline-flex items-center gap-2 bg-red-600 text-white px-8 py-4 rounded-lg font-bold hover:bg-red-700 transition-colors shadow-lg">
-                Submit Paper
-                <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                </svg>
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
+      <Hero
+        title="Call For Papers"
+        subtitle="A call for papers invites researchers to submit their work to ASRU 2025 for presentation or publication, outlining topics, and deadlines."
+        variant="roseFuchsia"
+      />
 
       {/* Workshop Description */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <p className="text-lg leading-relaxed mb-8">
-              The ASRU Workshop is a flagship event of IEEE Speech and Language Processing Technical Committee. It has a tradition of bringing together researchers from academia and industry to discuss problems in automatic speech recognition and understanding.
+            <h2 className="text-3xl font-bold text-gray-900 mb-8">Workshop Theme</h2>
+            <p className="text-lg leading-relaxed mb-6">
+              Children's speech and language pose unique challenges for speech technology, with rapid developmental changes, wide individual variation, and significant fairness concerns. Current AI systems trained on adult speech often fail for children, particularly for non-standard speech, dialects, or neurodiverse conditions. Addressing these gaps requires systems that are fair, precise, and interactive:
             </p>
-            <p className="text-lg leading-relaxed mb-8">
-              The workshop will feature invited talks/keynotes, regular papers and special sessions. All papers will be presented as posters.
-            </p>
+            
+            <div className="grid gap-6 md:grid-cols-3 mb-8">
+              <div className="bg-white rounded-xl p-6 shadow-lg border-l-4 border-blue-500">
+                <h3 className="text-xl font-bold text-blue-600 mb-3">Fairness</h3>
+                <p className="text-gray-700 text-sm leading-relaxed">
+                  Ensuring robust, inclusive performance across ages, languages, and developmental profiles, while upholding ethical data practices.
+                </p>
+              </div>
+              
+              <div className="bg-white rounded-xl p-6 shadow-lg border-l-4 border-green-500">
+                <h3 className="text-xl font-bold text-green-600 mb-3">Precision</h3>
+                <p className="text-gray-700 text-sm leading-relaxed">
+                  Building reliable tools for transcription and early detection of speech, language, and neurodevelopmental disorders.
+                </p>
+              </div>
+              
+              <div className="bg-white rounded-xl p-6 shadow-lg border-l-4 border-purple-500">
+                <h3 className="text-xl font-bold text-purple-600 mb-3">Interactivity</h3>
+                <p className="text-gray-700 text-sm leading-relaxed">
+                  Designing engaging, real-time feedback systems that support learning and clinical assessment.
+                </p>
+              </div>
+            </div>
+            
             <p className="text-lg leading-relaxed">
-              If you have any questions, please contact the ASRU 2025 TPC Chairs at <a href="mailto:tpc@asru2025.org" className="text-orange-600 hover:text-orange-700">tpc@asru2025.org</a>
+              This workshop brings together researchers in speech technology, clinical linguistics, and human-computer interaction to advance next-generation systems that are accurate, inclusive, and responsive to children's needs.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Topics Section */}
-      <section className="py-16">
+      {/* Paper Topics Section */}
+      <section className="py-16 bg-gradient-to-br from-orange-400 via-orange-500 to-orange-600 text-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">Topics</h2>
-            <p className="text-xl text-gray-600">Topics of interest include, but not limited to:</p>
+            <h2 className="text-4xl font-bold text-white mb-4">Paper Topics</h2>
+            <p className="text-xl text-white opacity-90">Topics of interest include, but are not limited to:</p>
           </div>
           
-          <div className="max-w-6xl mx-auto grid gap-6 md:grid-cols-2">
-            <div className="space-y-4">
-              <div className="flex items-start gap-3">
-                <div className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></div>
-                <span className="text-gray-700">Automatic speech recognition</span>
-              </div>
-              <div className="flex items-start gap-3">
-                <div className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></div>
-                <span className="text-gray-700">Spoken language processing</span>
-              </div>
-              <div className="flex items-start gap-3">
-                <div className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></div>
-                <span className="text-gray-700">Speech enhancement and separation</span>
-              </div>
-              <div className="flex items-start gap-3">
-                <div className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></div>
-                <span className="text-gray-700">Speech analysis</span>
-              </div>
-              <div className="flex items-start gap-3">
-                <div className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></div>
-                <span className="text-gray-700">Speaker and language recognition</span>
-              </div>
-              <div className="flex items-start gap-3">
-                <div className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></div>
-                <span className="text-gray-700">Speaker diarization</span>
-              </div>
-              <div className="flex items-start gap-3">
-                <div className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></div>
-                <span className="text-gray-700">Text-only language processing</span>
-              </div>
+          <div className="max-w-4xl mx-auto space-y-4">
+            <div className="flex items-start gap-3">
+              <div className="w-2 h-2 bg-white rounded-full mt-2 flex-shrink-0"></div>
+              <span className="text-white">ASR and modeling techniques for children's speech</span>
             </div>
-            
-            <div className="space-y-4">
-              <div className="flex items-start gap-3">
-                <div className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></div>
-                <span className="text-gray-700">Multimodal speech processing</span>
-              </div>
-              <div className="flex items-start gap-3">
-                <div className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></div>
-                <span className="text-gray-700">Multilingual speech processing</span>
-              </div>
-              <div className="flex items-start gap-3">
-                <div className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></div>
-                <span className="text-gray-700">Emotion recognition and paralinguistics</span>
-              </div>
-              <div className="flex items-start gap-3">
-                <div className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></div>
-                <span className="text-gray-700">Speech synthesis and spoken language generation</span>
-              </div>
-              <div className="flex items-start gap-3">
-                <div className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></div>
-                <span className="text-gray-700">Resources (new corpora, toolkits, evaluation metrics, etc.)</span>
-              </div>
-              <div className="flex items-start gap-3">
-                <div className="w-2 h-2 bg-orange-500 rounded-full mt-2 flex-shrink-0"></div>
-                <span className="text-gray-700">Machine learning for speech application</span>
-              </div>
+            <div className="flex items-start gap-3">
+              <div className="w-2 h-2 bg-white rounded-full mt-2 flex-shrink-0"></div>
+              <span className="text-white">Detection of speech and language disorders (e.g., speech delay, DLD, dyslexia, stuttering)</span>
+            </div>
+            <div className="flex items-start gap-3">
+              <div className="w-2 h-2 bg-white rounded-full mt-2 flex-shrink-0"></div>
+              <span className="text-white">Pronunciation and fluency analysis across ages</span>
+            </div>
+            <div className="flex items-start gap-3">
+              <div className="w-2 h-2 bg-white rounded-full mt-2 flex-shrink-0"></div>
+              <span className="text-white">Interactive learning, feedback, and screening systems</span>
+            </div>
+            <div className="flex items-start gap-3">
+              <div className="w-2 h-2 bg-white rounded-full mt-2 flex-shrink-0"></div>
+              <span className="text-white">Data collection, annotation, and benchmark design</span>
+            </div>
+            <div className="flex items-start gap-3">
+              <div className="w-2 h-2 bg-white rounded-full mt-2 flex-shrink-0"></div>
+              <span className="text-white">Multimodal and cross-linguistic methods for pediatric language modeling</span>
+            </div>
+            <div className="flex items-start gap-3">
+              <div className="w-2 h-2 bg-white rounded-full mt-2 flex-shrink-0"></div>
+              <span className="text-white">Privacy, fairness, and ethics in child speech technologies</span>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Important Dates */}
-      <section className="py-16 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <p className="text-sm font-semibold text-orange-600 mb-2">MARK YOUR CALENDARS</p>
-            <h2 className="text-4xl font-bold text-gray-900">Important Dates</h2>
-          </div>
-          
-          <div className="max-w-3xl mx-auto space-y-6">
-            <div className="bg-white rounded-xl p-6 shadow-lg border-l-4 border-orange-500">
-              <h3 className="text-xl font-bold text-orange-600 mb-2">MARCH 28, 2025</h3>
-              <p className="text-gray-700">Paper submissions open</p>
-            </div>
-            
-            <div className="bg-white rounded-xl p-6 shadow-lg border-l-4 border-red-500">
-              <h3 className="text-xl font-bold text-red-600 mb-2">MAY 28, 2025</h3>
-              <p className="text-gray-700">Regular & special session papers due</p>
-            </div>
-            
-            <div className="bg-white rounded-xl p-6 shadow-lg border-l-4 border-blue-500">
-              <h3 className="text-xl font-bold text-blue-600 mb-2">JUNE 4, 2025</h3>
-              <p className="text-gray-700">Paper revision due</p>
-            </div>
-            
-            <div className="bg-white rounded-xl p-6 shadow-lg border-l-4 border-green-500">
-              <h3 className="text-xl font-bold text-green-600 mb-2">AUGUST 6, 2025</h3>
-              <p className="text-gray-700">Paper notification of acceptance</p>
-            </div>
-            
-            <div className="bg-white rounded-xl p-6 shadow-lg border-l-4 border-purple-500">
-              <h3 className="text-xl font-bold text-purple-600 mb-2">AUGUST 13, 2025</h3>
-              <p className="text-gray-700">Registration Opens</p>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* Important Dates section removed per request */}
 
       {/* Submission Info */}
-      <section className="py-16">
+      <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl font-bold text-gray-900 mb-8">Submission Information</h2>

@@ -1,0 +1,103 @@
+{
+  "workshop": {
+    "date": "December 10, 2025",
+    "time": "2:00 PM HST",
+    "timezone": "HST",
+    "title": "IEEE Child Speech AI Workshop 2025",
+    "location": "University of Hawaii, Honolulu",
+    "venue": "University of Hawaii Conference Center",
+    "description": "Fair • Precise • Interactive Child Speech AI"
+  },
+  "registration": {
+    "opens": "September 1, 2025",
+    "closes": "December 5, 2025",
+    "type": "Free registration with limited capacity",
+    "url": "https://example.com/register"
+  },
+  "submission": {
+    "portal": "https://openreview.net/",
+    "types": ["Short papers: 3 pages", "Regular papers: up to 6 pages"],
+    "reviewType": "Single-blind, non-archival"
+  },
+  "importantDates": [
+
+    {
+      "id": "cfp-announcement",
+      "date": "August 18, 2025",
+      "title": "Call for Papers Announcement",
+      "description": "Submission portal opens for paper submissions",
+      "type": "info",
+      "color": "blue",
+      "priority": "medium",
+      "showOnHomepage": false,
+      "showOnCFP": true
+    },
+    {
+      "id": "registration-opens",
+      "date": "September 1, 2025",
+      "title": "Registration Opens",
+      "description": "Free registration portal opens with limited capacity",
+      "type": "registration",
+      "color": "green",
+      "priority": "high",
+      "showOnHomepage": true,
+      "showOnCFP": false
+    },
+    {
+      "id": "submission-deadline",
+      "date": "October 1, 2025",
+      "title": "Paper Submission Deadline",
+      "description": "Final deadline for paper submissions",
+      "type": "deadline",
+      "color": "red",
+      "priority": "high",
+      "showOnHomepage": true,
+      "showOnCFP": true
+    },
+    {
+      "id": "review-period",
+      "date": "October 13–26, 2025",
+      "title": "Review Period",
+      "description": "Expert review and evaluation of submitted papers",
+      "type": "process",
+      "color": "purple",
+      "priority": "medium",
+      "showOnHomepage": false,
+      "showOnCFP": true
+    },
+    {
+      "id": "acceptance-notification",
+      "date": "November 6, 2025",
+      "title": "Acceptance Notification",
+      "description": "Authors notified of paper acceptance decisions",
+      "type": "notification",
+      "color": "green",
+      "priority": "high",
+      "showOnHomepage": true,
+      "showOnCFP": true
+    },
+    {
+      "id": "registration-closes",
+      "date": "December 5, 2025",
+      "title": "Registration Closes",
+      "description": "Final day to register for workshop attendance",
+      "type": "registration",
+      "color": "red",
+      "priority": "high",
+      "showOnHomepage": true,
+      "showOnCFP": false
+    },
+    {
+      "id": "workshop-event",
+      "date": "December 10, 2025",
+      "title": "Workshop Event",
+      "description": "Main workshop day with presentations and networking",
+      "type": "event",
+      "color": "orange",
+      "priority": "high",
+      "showOnHomepage": true,
+      "showOnCFP": false
+    }
+  ]
+}
+

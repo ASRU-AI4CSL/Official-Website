@@ -1,0 +1,178 @@
+{
+
+  "Organizers": [
+    {
+      "name": "Anfeng Xu",
+      "title": "PhD",
+      "affiliation": "USC",
+      "description": "Status: Confirmed",
+      "email": "mailto:placeholder@example.com",
+      "website": "#",
+      "image": "/images/hero/child-speech-hero.jpeg"
+    },
+    {
+      "name": "Haolong Zheng",
+      "title": "PhD",
+      "affiliation": "UIUC",
+      "description": "Status: Confirmed",
+      "email": "mailto:placeholder@example.com",
+      "website": "#",
+      "image": "/images/organizers/HaolongZheng.jpg"
+    },
+    {
+      "name": "Xulin Fan",
+      "title": "PhD",
+      "affiliation": "UIUC",
+      "description": "Status: Confirmed",
+      "email": "mailto:placeholder@example.com",
+      "website": "#",
+      "image": "/images/organizers/XulinFan.png"
+    },
+    {
+      "name": "Bashima Islam",
+      "title": "Professor",
+      "affiliation": "WPI",
+      "description": "Status: Confirmed",
+      "email": "mailto:placeholder@example.com",
+      "website": "#",
+      "image": "/images/organizers/BashimaIslam.png"
+    },
+    {
+      "name": "Jinjun Xiong",
+      "title": "Professor",
+      "affiliation": "UB",
+      "description": "Status: Confirmed",
+      "email": "mailto:placeholder@example.com",
+      "website": "#",
+      "image": "/images/organizers/20240212_JinjunXiong.png"
+    },
+    {
+      "name": "Jialu Li",
+      "title": "Professor",
+      "affiliation": "U Arizona",
+      "description": "Status: Confirmed",
+      "email": "mailto:placeholder@example.com",
+      "website": "#",
+      "image": "/images/hero/child-speech-hero.jpeg"
+    },
+    {
+      "name": "Jiachen Lian",
+      "title": "PhD",
+      "affiliation": "UC Berkeley",
+      "description": "Status: Confirmed",
+      "email": "mailto:placeholder@example.com",
+      "website": "#",
+      "image": "/images/hero/child-speech-hero.jpeg"
+    },
+    {
+      "name": "Anna Seo Gyeong Choi",
+      "title": "PhD",
+      "affiliation": "Cornell",
+      "description": "Status: Confirmed",
+      "email": "mailto:placeholder@example.com",
+      "website": "#",
+      "image": "/images/hero/child-speech-hero.jpeg"
+    },
+    {
+      "name": "Mohammad Nur Hossain Khan",
+      "title": "PhD",
+      "affiliation": "WPI",
+      "description": "Status: Confirmed",
+      "email": "mailto:placeholder@example.com",
+      "website": "#",
+      "image": "/images/hero/child-speech-hero.jpeg"
+    }
+  ],
+  "programCommittee": [
+    {
+      "name": "Anfeng Xu",
+      "title": "PhD",
+      "affiliation": "USC",
+      "description": "Status: Confirmed",
+      "email": "mailto:placeholder@example.com",
+      "website": "#",
+      "image": "/images/hero/child-speech-hero.jpeg"
+    },
+    {
+      "name": "Haolong Zheng",
+      "title": "PhD",
+      "affiliation": "UIUC",
+      "description": "Status: Confirmed",
+      "email": "mailto:placeholder@example.com",
+      "website": "#",
+      "image": "/images/organizers/HaolongZheng.jpg"
+    },
+    {
+      "name": "Xulin Fan",
+      "title": "PhD",
+      "affiliation": "UIUC",
+      "description": "Status: TBD",
+      "email": "mailto:placeholder@example.com",
+      "website": "#",
+      "image": "/images/organizers/XulinFan.png"
+    },
+    {
+      "name": "Jialu Li",
+      "title": "Professor",
+      "affiliation": "University of Arizona",
+      "description": "Status: Maybe",
+      "email": "mailto:placeholder@example.com",
+      "website": "#",
+      "image": "/images/organizers/JialuLi.png"
+    },
+    {
+      "name": "Jiachen Lian",
+      "title": "PhD",
+      "affiliation": "UC Berkeley",
+      "description": "Status: In person",
+      "email": "mailto:placeholder@example.com",
+      "website": "#",
+      "image": "/images/hero/child-speech-hero.jpeg"
+    },
+    {
+      "name": "Anna Seo Gyeong Choi",
+      "title": "PhD",
+      "affiliation": "Cornell",
+      "description": "Status: Maybe",
+      "email": "mailto:placeholder@example.com",
+      "website": "#",
+      "image": "/images/hero/child-speech-hero.jpeg"
+    },
+    {
+      "name": "Mohammad Nur Hossain Khan",
+      "title": "PhD",
+      "affiliation": "WPI",
+      "description": "Status: Confirmed",
+      "email": "mailto:placeholder@example.com",
+      "website": "#",
+      "image": "/images/hero/child-speech-hero.jpeg"
+    },
+    {
+      "name": "Bashima Islam",
+      "title": "Professor",
+      "affiliation": "WPI",
+      "description": "Status: Confirmed",
+      "email": "mailto:placeholder@example.com",
+      "website": "#",
+      "image": "/images/hero/child-speech-hero.jpeg"
+    }
+  ],
+  "advisoryBoard": [
+    {
+      "name": "Shinji Watanabe",
+      "title": "Professor",
+      "affiliation": "CMU",
+      "description": "Status: In person",
+      "email": "mailto:placeholder@example.com",
+      "website": "#",
+      "image": "/images/hero/child-speech-hero.jpeg"
+    },
+    {
+      "name": "Prof. John Smith",
+      "title": "Professor",
+      "affiliation": "Advisory Institute, US",
+      "email": "mailto:john.smith@example.com",
+      "image": "/images/organizers/20240212_JinjunXiong.png"
+    }
+  ]
+}

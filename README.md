@@ -1,7 +1,7 @@
 # Child Speech AI Workshop — Starter
 
 A minimal Next.js 14 + Tailwind + MDX site for a workshop. Includes:
-- Pages: Home, CFP, Schedule, Speakers, Venue, FAQ, CoC, Organizers
+- Pages: Home, CFP, Schedule, Speakers, Venue, FAQ, Organizers
 - Components: Nav
 - Lib: JSON-LD Event, simple ICS generator
 - Content folders for MDX (speakers, sessions)
@@ -59,8 +59,107 @@ All images are organized in `public/images/` with the following subdirectories:
 - **Size**: Vector or high-res (min 300x150px)
 - **Examples**: `google-logo.png`, `microsoft-logo.svg`
 
-## Customize
-- Update dates, venue, and registration URLs in `app/page.tsx`, `app/(site)/*`.
-- Add speakers/sessions under `content/`.
-- Upload images following the directory structure above.
-- Deploy on Vercel.
+## Content Management Guide
+
+### Adding New Speakers
+
+1. **Add Speaker Image**:
+   - Upload speaker photo to `/public/images/speakers/`
+   - Use naming convention: `firstname-lastname.jpg`
+   - Recommended size: 512x512px square
+
+2. **Update Speakers Page**:
+   - Edit `/app/(site)/speakers/page.tsx`
+   - Add new speaker object to the speakers array:
+   ```javascript
+   {
+     name: "Dr. Jane Smith",
+     title: "Senior Researcher",
+     affiliation: "University of Technology",
+     image: "/images/speakers/jane-smith.jpg",
+     bio: "Dr. Smith is a leading expert in...",
+     talk: "Title of Their Talk"
+   }
+   ```
+
+### Adding New Organizers
+
+1. **Add Organizer Image**:
+   - Upload photo to `/public/images/organizers/`
+   - Use naming convention: `firstname-lastname.jpg`
+   - Recommended size: 512x512px square
+
+2. **Update Organizers Page**:
+   - Edit `/app/(site)/organizers/page.tsx`
+   - Add organizer to appropriate section (General Chairs, Advisory Board, etc.):
+   ```javascript
+   {
+     name: "Dr. John Doe",
+     title: "Professor",
+     affiliation: "Research University",
+     email: "john.doe@university.edu",
+     image: "/images/organizers/john-doe.jpg"
+   }
+   ```
+
+### Adding Schedule Sessions
+
+1. **Add Session Image** (if needed):
+   - Upload to `/public/images/schedule/`
+   - Use descriptive names: `session-topic.jpg`
+
+2. **Update Schedule Page**:
+   - Edit `/app/(site)/schedule/page.tsx`
+   - Add new session object:
+   ```javascript
+   {
+     time: "10:00 AM",
+     title: "Session Title",
+     description: "Description of the session...",
+     speaker: "Speaker Name",
+     image: "/images/schedule/session-image.jpg"
+   }
+   ```
+
+### Updating Important Dates
+
+- **Homepage**: Edit dates in `/app/page.tsx` in the "Important Dates" section
+- **CFP Page**: Edit dates in `/app/(site)/cfp/page.tsx` in the "Important Dates" section
+
+### Adding FAQ Items
+
+- Edit `/app/(site)/faq/page.tsx`
+- Add new FAQ to the appropriate category in `faqCategories` array:
+```javascript
+{
+  q: "Your question here?",
+  a: "Your answer here..."
+}
+```
+
+### Updating Venue Information
+
+- Edit `/app/(site)/venue/page.tsx`
+- Update venue details, hotel recommendations, and transportation info
+- Add venue photos to `/public/images/venue/`
+
+### Customizing Colors and Styling
+
+- **Global Colors**: Edit CSS variables in `/app/globals.css`
+- **Button Styles**: Modify `.btn-conference-primary` and `.btn-conference-secondary` classes
+- **Navigation**: Update links in `/components/Nav.tsx`
+
+## Development Commands
+
+```bash
+npm install          # Install dependencies
+npm run dev         # Start development server (http://localhost:3000)
+npm run build       # Build for production
+npm run lint        # Run ESLint
+```
+
+## Deployment
+
+- Deploy on Vercel by connecting your GitHub repository
+- Ensure all images are properly uploaded to `/public/images/`
+- Test all pages and links before going live

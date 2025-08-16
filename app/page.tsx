@@ -1,4 +1,6 @@
 import { eventJsonLd } from '../lib/seo'
+import { importantDates, workshopDate, registrationDates, DateUtils } from '../lib/dates'
+import ImportantDates from '../components/ImportantDates'
 
 export const metadata = {
   title: 'Home — Child Speech AI Workshop',
@@ -25,7 +27,7 @@ export default function Page() {
                   <svg className="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
                   </svg>
-                  DECEMBER 6-10, 2025
+                  {workshopDate.date.toUpperCase()}
                 </div>
                 
                 <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4 leading-tight">
@@ -66,7 +68,7 @@ export default function Page() {
               <p className="text-gray-700 leading-relaxed mb-6 text-sm">
                 Short (3pp) and regular (up to 6pp) submissions via OpenReview; single-blind, non-archival.
               </p>
-              <a className="inline-flex items-center gap-2 bg-orange-500 text-white px-4 py-2 rounded-lg hover:bg-orange-600 transition-colors font-medium text-sm" href="/cfp">
+              <a className="btn-conference-primary" href="/cfp">
                 Read CFP
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -79,7 +81,7 @@ export default function Page() {
               <p className="text-gray-700 leading-relaxed mb-6 text-sm">
                 Afternoon program with invited talks, contributed papers, posters, and discussion.
               </p>
-              <a className="inline-flex items-center gap-2 bg-orange-500 text-white px-4 py-2 rounded-lg hover:bg-orange-600 transition-colors font-medium text-sm" href="/schedule">
+              <a className="btn-conference-primary" href="/schedule">
                 See schedule
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -92,7 +94,7 @@ export default function Page() {
               <p className="text-gray-700 leading-relaxed mb-6 text-sm">
                 University of Hawaii campus, Honolulu (subject to change). Accessibility information included.
               </p>
-              <a className="inline-flex items-center gap-2 bg-orange-500 text-white px-4 py-2 rounded-lg hover:bg-orange-600 transition-colors font-medium text-sm" href="/venue">
+              <a className="btn-conference-primary" href="/venue">
                 Plan your visit
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -128,11 +130,11 @@ export default function Page() {
                 <div className="space-y-2">
                   <div className="flex justify-between items-center">
                     <span className="text-sm text-gray-600">Deadline:</span>
-                    <span className="font-semibold text-blue-700">Oct 15, 2025</span>
+                    <span className="font-semibold text-blue-700">{importantDates.find(d => d.type === 'deadline')?.date.replace(', 2025', '')}</span>
                   </div>
                   <div className="flex justify-between items-center">
                     <span className="text-sm text-gray-600">Notification:</span>
-                    <span className="font-semibold text-blue-700">Nov 20, 2025</span>
+                    <span className="font-semibold text-blue-700">{importantDates.find(d => d.type === 'notification')?.date.replace(', 2025', '')}</span>
                   </div>
                 </div>
                 <p className="text-sm text-gray-600 mt-3">
@@ -153,15 +155,15 @@ export default function Page() {
                 <div className="space-y-2">
                   <div className="flex justify-between items-center">
                     <span className="text-sm text-gray-600">Opens:</span>
-                    <span className="font-semibold text-green-700">Sep 1, 2025</span>
+                    <span className="font-semibold text-green-700">{registrationDates.opens.replace(', 2025', '')}</span>
                   </div>
                   <div className="flex justify-between items-center">
                     <span className="text-sm text-gray-600">Closes:</span>
-                    <span className="font-semibold text-green-700">Dec 5, 2025</span>
+                    <span className="font-semibold text-green-700">{registrationDates.closes.replace(', 2025', '')}</span>
                   </div>
                 </div>
                 <p className="text-sm text-gray-600 mt-3">
-                  Free registration with limited capacity
+                  {registrationDates.type}
                 </p>
               </div>
 
@@ -178,69 +180,28 @@ export default function Page() {
                 <div className="space-y-2">
                   <div className="flex justify-between items-center">
                     <span className="text-sm text-gray-600">Date:</span>
-                    <span className="font-semibold text-orange-700">Dec 10, 2025</span>
+                    <span className="font-semibold text-orange-700">{workshopDate.date.replace(', 2025', '')}</span>
                   </div>
                   <div className="flex justify-between items-center">
                     <span className="text-sm text-gray-600">Time:</span>
-                    <span className="font-semibold text-orange-700">2:00 PM HST</span>
+                    <span className="font-semibold text-orange-700">{workshopDate.time}</span>
                   </div>
                 </div>
                 <p className="text-sm text-gray-600 mt-3">
-                  Full-day program in Honolulu, Hawaii
+                  {workshopDate.description}
                 </p>
               </div>
             </div>
 
-            {/* Additional Important Dates */}
-            <div className="mt-8 bg-gray-50 rounded-xl p-6">
-              <h3 className="text-lg font-bold text-gray-900 mb-4">Additional Deadlines</h3>
-              <div className="grid gap-4 md:grid-cols-2">
-                <div className="flex justify-between items-center p-3 bg-white rounded-lg">
-                  <span className="text-sm font-medium text-gray-700">Hotel Booking Discount</span>
-                  <span className="text-sm font-semibold text-purple-600">Nov 6, 2025</span>
-                </div>
-                <div className="flex justify-between items-center p-3 bg-white rounded-lg">
-                  <span className="text-sm font-medium text-gray-700">Camera-Ready Papers</span>
-                  <span className="text-sm font-semibold text-purple-600">Nov 30, 2025</span>
-                </div>
-                <div className="flex justify-between items-center p-3 bg-white rounded-lg">
-                  <span className="text-sm font-medium text-gray-700">Presentation Upload</span>
-                  <span className="text-sm font-semibold text-purple-600">Dec 8, 2025</span>
-                </div>
-                <div className="flex justify-between items-center p-3 bg-white rounded-lg">
-                  <span className="text-sm font-medium text-gray-700">Virtual Setup Test</span>
-                  <span className="text-sm font-semibold text-purple-600">Dec 9, 2025</span>
-                </div>
-              </div>
+            {/* Additional Important Dates (link to full list) */}
+            <div className="mt-8 bg-gray-50 rounded-xl p-6 text-center">
+              <a className="btn-conference-primary" href="/dates">View All Important Dates</a>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Main Content Container */}
-      <div className="container space-y-16 py-16">
-
-        {/* Registration Section */}
-        <section id="register" className="card p-16 text-center glass glow">
-          <div className="max-w-3xl mx-auto">
-            <div className="feature-icon mx-auto mb-8" style={{background: 'linear-gradient(135deg, #9333ea, #ec4899)', width: '5rem', height: '5rem'}}>
-              <svg className="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-              </svg>
-            </div>
-            <h2 className="text-gradient mb-6">Registration</h2>
-            <p className="text-xl text-gray-700 mb-12 leading-relaxed">
-              Participation is free. Reserve your spot—capacity is limited.
-            </p>
-            <a className="btn-conference-primary text-xl px-12 py-6" href="https://example.com/register">
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
-              </svg>
-              Register Free
-            </a>
-          </div>
-        </section>
-      </div>
+      {/* Registration section removed per request */}
     </>
   )
 }
