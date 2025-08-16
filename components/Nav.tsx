@@ -7,6 +7,7 @@ const links = [
   { href: '/cfp', label: 'CFP' },
   { href: '/schedule', label: 'Schedule' },
   { href: '/speakers', label: 'Speakers' },
+  { href: '/organizers', label: 'Organizers' },
   { href: '/venue', label: 'Venue' },
   { href: '/faq', label: 'FAQ' },
   { href: '/coc', label: 'CoC' },
@@ -27,7 +28,7 @@ export default function Nav() {
             <span className="sm:hidden">Child Speech AI</span>
           </Link>
           
-          <div className="hidden lg:flex gap-4 xl:gap-6 text-sm font-medium mx-4 xl:mx-8 flex-shrink min-w-0">
+          <div className="hidden lg:flex gap-3 xl:gap-4 text-sm font-medium mx-4 xl:mx-6 flex-1 justify-center max-w-fit">
             {links.map(l => (
               <Link 
                 key={l.href} 
@@ -39,26 +40,26 @@ export default function Nav() {
             ))}
           </div>
           
-          <div className="flex gap-4 xl:gap-6 text-sm font-medium flex-shrink-0">
+          <div className="flex gap-3 xl:gap-4 text-sm font-medium flex-shrink-0">
             <a 
-              className="nav-link whitespace-nowrap flex items-center gap-2" 
+              className="nav-link whitespace-nowrap flex items-center gap-1 px-2 py-1" 
               href="#register"
             >
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
               </svg>
-              <span className="hidden md:inline">Register (Free)</span>
-              <span className="md:hidden">Register</span>
+              <span className="hidden lg:inline">Register (Free)</span>
+              <span className="lg:hidden">Register</span>
             </a>
             <a 
-              className="nav-link whitespace-nowrap flex items-center gap-2 bg-orange-500 text-white rounded-lg px-3 py-2 hover:bg-orange-600 transition-colors" 
+              className="nav-link whitespace-nowrap flex items-center gap-1 bg-orange-500 text-white rounded-lg px-3 py-2 hover:bg-orange-600 transition-colors" 
               href="/cfp#submit"
             >
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
               </svg>
-              <span className="hidden md:inline">Submit Paper</span>
-              <span className="md:hidden">Submit</span>
+              <span className="hidden lg:inline">Submit Paper</span>
+              <span className="lg:hidden">Submit</span>
             </a>
           </div>
         </div>

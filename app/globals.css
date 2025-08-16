@@ -518,7 +518,8 @@ a:hover {
 .btn-conference-primary:hover {
   transform: translateY(-3px);
   box-shadow: 0 15px 35px -8px rgba(251, 113, 133, 0.5);
-  background: linear-gradient(135deg, rgb(var(--magenta)), rgb(var(--coral)));
+  background: linear-gradient(135deg, rgb(219 39 119), rgb(220 38 127));
+  color: white;
 }
 
 .btn-conference-secondary {
