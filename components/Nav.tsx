@@ -32,7 +32,7 @@ export default function Nav() {
             {links.map(l => (
               <Link 
                 key={l.href} 
-                href={l.href} 
+                href={l.href as any} 
                 className={`nav-link whitespace-nowrap ${pathname === l.href ? 'active' : ''}`}
               >
                 {l.label}
@@ -70,7 +70,7 @@ export default function Nav() {
             {links.map(l => (
               <Link 
                 key={l.href} 
-                href={l.href} 
+                href={l.href as any} 
                 className={`nav-link ${pathname === l.href ? 'active' : ''}`}
               >
                 {l.label}

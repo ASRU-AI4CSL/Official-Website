@@ -5,7 +5,7 @@ const speakers = [
     name: 'Dr. Jinjun Xiong', 
     affiliation: 'IBM Research and Columbia University',
     role: 'General Chair',
-    image: '/images/20240212_JinjunXiong.png',
+    image: '/images/speakers/20240212_JinjunXiong.png',
     bio: 'Leading researcher in child speech recognition and multimodal AI systems.',
     slug: 'jinjun-xiong'
   },
@@ -13,7 +13,7 @@ const speakers = [
     name: 'Prof. Sarah Chen', 
     affiliation: 'Stanford University Department of Linguistics',
     role: 'Program Chair',
-    image: '/images/20240212_JinjunXiong.png',
+    image: '/images/speakers/20240212_JinjunXiong.png',
     bio: 'Expert in speech disorders and assistive technologies for children.',
     slug: 'sarah-chen'
   },
@@ -21,7 +21,7 @@ const speakers = [
     name: 'Dr. Yuki Tanaka', 
     affiliation: 'University of Tokyo Speech Processing Lab',
     role: 'Technical Chair',
-    image: '/images/20240212_JinjunXiong.png',
+    image: '/images/speakers/20240212_JinjunXiong.png',
     bio: 'Specialist in cross-linguistic speech processing and fairness in AI.',
     slug: 'yuki-tanaka'
   },

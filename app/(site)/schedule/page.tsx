@@ -52,10 +52,12 @@ export default function Page() {
     <>
       {/* Hero Section */}
       <section className="py-16 bg-gradient-to-r from-orange-500 to-pink-500 text-white text-center">
-        <h1 className="text-5xl font-bold mb-4">Workshop Schedule</h1>
-        <p className="max-w-2xl mx-auto text-lg">
-          Dec 10, 2025 (HST) — join us for a day of talks and sessions focused on advancing child speech AI technologies with fairness, precision, and interactive learning.
-        </p>
+        <div className="container mx-auto px-4">
+          <h1 className="text-5xl font-bold mb-4">Workshop Schedule</h1>
+          <p className="max-w-2xl mx-auto text-lg">
+            Dec 10, 2025 (HST) — join us for a day of talks and sessions focused on advancing child speech AI technologies with fairness, precision, and interactive learning.
+          </p>
+        </div>
       </section>
 
       {/* Events with Alternating Layout */}
@@ -72,7 +74,7 @@ export default function Page() {
                 </div>
               )}
               
-              <div className={`flex flex-col lg:flex-row items-center gap-8 lg:gap-12 ${
+              <div className={`flex flex-col lg:flex-row items-center gap-8 lg:gap-16 ${
                 idx % 2 === 1 ? 'lg:flex-row-reverse' : ''
               }`}>
                 {/* Image */}
@@ -80,27 +82,27 @@ export default function Page() {
                   <img
                     src={e.image}
                     alt={e.title}
-                    className="w-full h-64 lg:h-80 object-cover rounded-lg shadow-lg"
+                    className="w-full h-64 lg:h-96 object-cover rounded-xl shadow-xl"
                   />
                 </div>
                 
                 {/* Content */}
-                <div className="w-full lg:w-1/2 text-center lg:text-left">
-                  <div className="inline-block bg-orange-100 text-orange-600 text-sm font-semibold px-3 py-1 rounded-full mb-4">
+                <div className={`w-full lg:w-1/2 ${idx % 2 === 1 ? 'text-center lg:text-right' : 'text-center lg:text-left'}`}>
+                  <div className="inline-block bg-orange-100 text-orange-700 text-sm font-bold px-4 py-2 rounded-full mb-6 uppercase tracking-wide">
                     {e.time} · {e.room}
                   </div>
                   
-                  <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+                  <h2 className="text-3xl lg:text-5xl font-black text-gray-900 mb-6 leading-tight">
                     {e.title}
                   </h2>
                   
                   {e.speaker && (
-                    <p className="text-lg text-gray-700 mb-4 font-medium">
+                    <p className="text-xl text-gray-800 mb-6 font-semibold">
                       {e.speaker}
                     </p>
                   )}
                   
-                  <p className="text-gray-600 leading-relaxed text-lg">
+                  <p className="text-gray-700 leading-relaxed text-lg lg:text-xl max-w-lg">
                     {e.description}
                   </p>
                 </div>
