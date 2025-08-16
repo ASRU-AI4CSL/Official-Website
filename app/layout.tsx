@@ -23,9 +23,18 @@ export const metadata: Metadata = {
   },
 }
 
+const basePath =
+  process.env.NODE_ENV === 'production'
+    ? '/ASRU-ChildWorkshopWebpage/'
+    : '/'
+
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
+      <head>
+        {/* 👇 This makes all /images/, /coc, /favicon.ico resolve correctly under GitHub Pages */}
+        <base href={basePath} />
+      </head>
       <body className="min-h-screen flex flex-col">
         <Nav />
         <main className="flex-1">{children}</main>
