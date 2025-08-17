@@ -151,9 +151,9 @@ export default function Nav() {
         
         {/* Mobile Navigation Menu */}
         <div className={`lg:hidden transition-all duration-300 ease-in-out ${
-          mobileMenuOpen ? 'max-h-[500px] opacity-100 pb-4' : 'max-h-0 opacity-0 overflow-hidden'
+          mobileMenuOpen ? 'max-h-[500px] opacity-100 pb-4' : 'max-h-0 opacity-0 overflow-hidden pb-0'
         }`}>
-          <div className="border-t border-gray-200 pt-4 space-y-4">
+          <div className={`${mobileMenuOpen ? 'border-t border-gray-200 pt-4 space-y-4' : 'pt-0 space-y-0'}`}>
             {/* Navigation Links */}
             <div className="grid grid-cols-2 gap-3 text-sm font-medium">
               {navLinks.map(l => (
