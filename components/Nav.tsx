@@ -13,7 +13,6 @@ const navLinks = [
   { href: '/dates', label: 'Dates' },
   { href: '/venue', label: 'Venue' },
   { href: '/faq', label: 'FAQ' },
-  { href: '/coc', label: 'Code of Conduct' },
 ]
 
 export default function Nav() {
