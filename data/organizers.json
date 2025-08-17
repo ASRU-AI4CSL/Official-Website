@@ -1,6 +1,6 @@
 {
 
-  "Organizers": [
+  "Organizers & Program Committee": [
     {
       "name": "Anfeng Xu",
       "title": "PhD",
@@ -81,80 +81,6 @@
       "email": "mailto:placeholder@example.com",
       "website": "#",
       "image": "https://drive.google.com/file/d/1s6bNFSjSfz0L2hniNnGpHwAO8q-GJ8Eu/view?usp=drive_link"
-    }
-  ],
-  "programCommittee": [
-    {
-      "name": "Anfeng Xu",
-      "title": "PhD",
-      "affiliation": "USC",
-      "description": "Status: Confirmed",
-      "email": "mailto:placeholder@example.com",
-      "website": "#",
-      "image": "https://drive.google.com/file/d/1MBRiSu9c1sd7ULRSPLpfUEz6dPD9QcrX/view?usp=drive_link"
-    },
-    {
-      "name": "Haolong Zheng",
-      "title": "PhD",
-      "affiliation": "UIUC",
-      "description": "Status: Confirmed",
-      "email": "mailto:placeholder@example.com",
-      "website": "#",
-      "image": "https://drive.google.com/file/d/1pEt2eR6RjlY1mjW062_x5MNa-LmJdjPy/view?usp=drive_link"
-    },
-    {
-      "name": "Xulin Fan",
-      "title": "PhD",
-      "affiliation": "UIUC",
-      "description": "Status: TBD",
-      "email": "mailto:placeholder@example.com",
-      "website": "#",
-      "image": "https://drive.google.com/file/d/1NaXIOlr12NeaD9BygXGed-RSE1l1UShs/view?usp=drive_link"
-    },
-    {
-      "name": "Jialu Li",
-      "title": "Professor",
-      "affiliation": "University of Arizona",
-      "description": "Status: Maybe",
-      "email": "mailto:placeholder@example.com",
-      "website": "#",
-      "image": "https://drive.google.com/file/d/1FmdIrpefHJ8AMH6zIzEVaWN2014vYVZu/view?usp=drive_link"
-    },
-    {
-      "name": "Jiachen Lian",
-      "title": "PhD",
-      "affiliation": "UC Berkeley",
-      "description": "Status: In person",
-      "email": "mailto:placeholder@example.com",
-      "website": "#",
-      "image": "https://drive.google.com/file/d/1MBRiSu9c1sd7ULRSPLpfUEz6dPD9QcrX/view?usp=drive_link"
-    },
-    {
-      "name": "Anna Seo Gyeong Choi",
-      "title": "PhD",
-      "affiliation": "Cornell",
-      "description": "Status: Maybe",
-      "email": "mailto:placeholder@example.com",
-      "website": "#",
-      "image": "https://drive.google.com/file/d/1MBRiSu9c1sd7ULRSPLpfUEz6dPD9QcrX/view?usp=drive_link"
-    },
-    {
-      "name": "Mohammad Nur Hossain Khan",
-      "title": "PhD",
-      "affiliation": "WPI",
-      "description": "Status: Confirmed",
-      "email": "mailto:placeholder@example.com",
-      "website": "#",
-      "image": "https://drive.google.com/file/d/1MBRiSu9c1sd7ULRSPLpfUEz6dPD9QcrX/view?usp=drive_link"
-    },
-    {
-      "name": "Bashima Islam",
-      "title": "Professor",
-      "affiliation": "WPI",
-      "description": "Status: Confirmed",
-      "email": "mailto:placeholder@example.com",
-      "website": "#",
-      "image": "https://drive.google.com/file/d/1ZUxVYeeMMiea5H_6KgUbIiwuK2W2D4G-/view?usp=drive_link"
     }
   ],
   "advisoryBoard": [
