@@ -16,6 +16,25 @@ type Props = {
 
 export default function ExternalImage({ src, alt, className, width = 1200, height = 800, priority = false, quality, fill = false, style, sizes }: Props) {
   const normalized = normalizeExternalImageUrl(src)
+  
+  // For external URLs, use regular img tag to avoid basePath issues
+  const isExternal = normalized.startsWith('http')
+  
+  if (isExternal) {
+    return (
+      <img
+        src={normalized}
+        alt={alt}
+        className={className}
+        width={fill ? undefined : width}
+        height={fill ? undefined : height}
+        style={style}
+        loading={priority ? "eager" : "lazy"}
+      />
+    )
+  }
+  
+  // For local images, use Next.js Image
   return (
     <Image
       src={normalized}
