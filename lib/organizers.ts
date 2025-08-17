@@ -66,6 +66,40 @@ function humanizeKey(key: string): string {
     .join(' ')
 }
 
+function getTitleRank(title: string | undefined): number {
+  if (!title) return 99
+  const lower = title.toLowerCase()
+  
+  // Professor ranks highest
+  if (lower.includes('professor')) return 1
+  
+  // Assistant Professor
+  if (lower.includes('assistant professor')) return 2
+  
+  // Associate Professor  
+  if (lower.includes('associate professor')) return 3
+  
+  // PhD students
+  if (lower.includes('phd') || lower === 'phd') return 4
+  
+  // Everything else
+  return 5
+}
+
+function sortOrganizersByTitle(organizers: Organizer[]): Organizer[] {
+  return [...organizers].sort((a, b) => {
+    const rankA = getTitleRank(a.title)
+    const rankB = getTitleRank(b.title)
+    
+    if (rankA !== rankB) {
+      return rankA - rankB
+    }
+    
+    // If same rank, sort alphabetically by name
+    return a.name.localeCompare(b.name)
+  })
+}
+
 export function getOrganizerSections(): OrganizerSectionData[] {
   const metaSections = Array.isArray(rawAny?.sections) ? (rawAny.sections as OrganizerSectionDef[]) : null
   const usedKeys = new Set<string>()
@@ -73,7 +107,7 @@ export function getOrganizerSections(): OrganizerSectionData[] {
 
   if (metaSections) {
     for (const s of metaSections) {
-      const items = firstArrayOrEmpty<Organizer>([s.key])
+      const items = sortOrganizersByTitle(firstArrayOrEmpty<Organizer>([s.key]))
       sections.push({
         key: s.key,
         title: s.title || humanizeKey(s.key),
@@ -88,7 +122,7 @@ export function getOrganizerSections(): OrganizerSectionData[] {
   for (const [k, v] of Object.entries(rawAny || {})) {
     if (usedKeys.has(k)) continue
     if (Array.isArray(v)) {
-      sections.push({ key: k, title: humanizeKey(k), items: v as Organizer[] })
+      sections.push({ key: k, title: humanizeKey(k), items: sortOrganizersByTitle(v as Organizer[]) })
     }
   }
 
