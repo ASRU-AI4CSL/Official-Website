@@ -22,17 +22,17 @@ export default function Page() {
             <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 w-px bg-gray-200" />
             {scheduleEvents.map((e, idx) => {
               const isTalk = e.type === 'talk' || e.type === 'keynote'
-              const speakerCandidates = (e.speaker || '')
+              const speakerCandidates = (isTalk && 'speaker' in e ? e.speaker || '' : '')
                 .split(/\s+or\s+/i)
                 .map(s => s.trim())
                 .filter(Boolean)
               const speakerData = isTalk
                 ? speakers.find(s => speakerCandidates.includes(s.name))
                 : undefined
-              const displayTitle = isTalk && speakerData?.talkTitle ? speakerData.talkTitle : e.title
-              const displayDesc = isTalk && speakerData?.talkDescription ? speakerData.talkDescription : e.description
+              const displayTitle = (isTalk && speakerData?.talkTitle ? speakerData.talkTitle : ('title' in e ? e.title : '')) || ''
+              const displayDesc = (isTalk && speakerData?.talkDescription ? speakerData.talkDescription : ('description' in e ? e.description : '')) || ''
               const displayImage = isTalk && speakerData?.image ? speakerData.image : e.image
-              const displaySpeaker = speakerData?.name || e.speaker
+              const displaySpeaker = speakerData?.name || (isTalk && 'speaker' in e ? e.speaker : undefined)
               const displayAffiliation = speakerData?.affiliation
 
               const ImageEl = displayImage ? (
