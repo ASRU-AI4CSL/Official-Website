@@ -415,6 +415,13 @@ a:hover {
     rgba(236, 72, 153, 0.1) 100%);
 }
 
+/* Ensure proper stretching on larger screens */
+@media (min-width: 1200px) {
+  .hero-fullwidth {
+    min-height: 100vh;
+  }
+}
+
 /* Override mobile background on medium screens and up when image is shown */
 @media (min-width: 768px) {
   .hero-fullwidth {
@@ -433,16 +440,16 @@ a:hover {
   /* Use direct-view Google Drive URL to ensure image loads as background */
   background: url('https://drive.google.com/uc?export=view&id=1MBRiSu9c1sd7ULRSPLpfUEz6dPD9QcrX');
   background-size: cover;
-  background-position: center;
+  background-position: center center;
   background-repeat: no-repeat;
   animation: heroShift 25s ease-in-out infinite;
 }
 
 @keyframes heroShift {
-  0%, 100% { transform: scale(1) rotate(0deg); }
-  25% { transform: scale(1.05) rotate(0.5deg); }
-  50% { transform: scale(1.02) rotate(-0.3deg); }
-  75% { transform: scale(1.03) rotate(0.2deg); }
+  0%, 100% { transform: scale(1.1) rotate(0deg); }
+  25% { transform: scale(1.15) rotate(0.5deg); }
+  50% { transform: scale(1.12) rotate(-0.3deg); }
+  75% { transform: scale(1.13) rotate(0.2deg); }
 }
 
 .hero-content {
