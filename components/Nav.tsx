@@ -22,6 +22,7 @@ export default function Nav() {
   const nextBadge = submission ? `${submission.title}: ${DateUtils.formatDateShort(submission.date)}` : 'Dates'
   const peopleActive = pathname === '/speakers' || pathname === '/organizers'
   const [peopleOpen, setPeopleOpen] = useState(false)
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null)
 
   const handlePeopleEnter = () => {
@@ -36,11 +37,15 @@ export default function Nav() {
     if (closeTimer.current) clearTimeout(closeTimer.current)
     closeTimer.current = setTimeout(() => setPeopleOpen(false), 200)
   }
+
+  const closeMobileMenu = () => {
+    setMobileMenuOpen(false)
+  }
   
   return (
     <div className="nav">
       <div className="container">
-        <div className="flex items-center justify-between py-6 w-full">
+        <div className="flex items-center justify-between py-4 lg:py-6 w-full">
           <Link 
             href="/" 
             className="text-gradient font-bold text-lg lg:text-xl xl:text-2xl tracking-tight transition-colors duration-300 flex-shrink-0"
@@ -49,6 +54,7 @@ export default function Nav() {
             <span className="sm:hidden">Child Speech AI</span>
           </Link>
           
+          {/* Desktop Navigation */}
           <div className="hidden lg:flex gap-3 xl:gap-4 text-sm font-medium mx-4 xl:mx-6 flex-1 justify-center max-w-fit">
             {navLinks.slice(0, 3).map(l => (
               <Link
@@ -99,7 +105,8 @@ export default function Nav() {
             ))}
           </div>
           
-          <div className="flex items-center gap-3 xl:gap-4 text-sm font-medium flex-shrink-0">
+          {/* Desktop Action Buttons */}
+          <div className="hidden lg:flex items-center gap-3 xl:gap-4 text-sm font-medium flex-shrink-0">
             <a 
               className="btn-conference-secondary whitespace-nowrap flex items-center gap-1" 
               href={(externalUrls as any).register}
@@ -123,23 +130,86 @@ export default function Nav() {
               <span className="lg:hidden">Submit</span>
             </a>
           </div>
+
+          {/* Mobile Action Buttons */}
+          <div className="flex lg:hidden items-center gap-2 text-xs font-medium">
+            <a 
+              className="btn-conference-secondary-sm flex items-center gap-1 px-2 py-1" 
+              href={(externalUrls as any).register}
+            >
+              <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+              </svg>
+              Register
+            </a>
+            <a 
+              className="btn-conference-primary-sm flex items-center gap-1 px-2 py-1" 
+              href={(externalUrls as any).submitPaper}
+              target={(externalUrls as any).submitPaper?.startsWith('http') ? '_blank' : undefined}
+              rel={(externalUrls as any).submitPaper?.startsWith('http') ? 'noopener' : undefined}
+            >
+              <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
+              Submit
+            </a>
+            
+            {/* Hamburger Menu Button */}
+            <button
+              className="lg:hidden p-2 rounded-md hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-orange-400 transition-colors"
+              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              aria-label="Toggle navigation menu"
+              aria-expanded={mobileMenuOpen}
+            >
+              <svg className="w-5 h-5 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                {mobileMenuOpen ? (
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                ) : (
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                )}
+              </svg>
+            </button>
+          </div>
         </div>
         
-        {/* Mobile Navigation */}
-        <div className="lg:hidden pb-4">
-          <div className="flex flex-wrap gap-4 text-sm font-medium">
-            {navLinks.map(l => (
-              <Link
-                key={l.href}
-                href={l.href as any}
-                className={`nav-link ${pathname === l.href ? 'active' : ''}`}
+        {/* Mobile Navigation Menu */}
+        <div className={`lg:hidden transition-all duration-300 ease-in-out ${
+          mobileMenuOpen ? 'max-h-96 opacity-100 pb-4' : 'max-h-0 opacity-0 overflow-hidden'
+        }`}>
+          <div className="border-t border-gray-200 pt-4">
+            <div className="grid grid-cols-2 gap-3 text-sm font-medium">
+              {navLinks.map(l => (
+                <Link
+                  key={l.href}
+                  href={l.href as any}
+                  className={`nav-link-mobile block px-3 py-2 rounded-md text-center ${
+                    pathname === l.href ? 'bg-orange-100 text-orange-700 font-semibold' : 'text-gray-700 hover:bg-gray-50'
+                  }`}
+                  onClick={closeMobileMenu}
+                >
+                  {l.label}
+                </Link>
+              ))}
+              {/* Peoples as separate links on mobile */}
+              <Link 
+                href="/speakers" 
+                className={`nav-link-mobile block px-3 py-2 rounded-md text-center ${
+                  pathname === '/speakers' ? 'bg-orange-100 text-orange-700 font-semibold' : 'text-gray-700 hover:bg-gray-50'
+                }`}
+                onClick={closeMobileMenu}
               >
-                {l.label}
+                Speakers
               </Link>
-            ))}
-            {/* Peoples as flat links on mobile */}
-            <Link href="/speakers" className={`nav-link ${pathname === '/speakers' ? 'active' : ''}`}>Speakers</Link>
-            <Link href="/organizers" className={`nav-link ${pathname === '/organizers' ? 'active' : ''}`}>Organizers</Link>
+              <Link 
+                href="/organizers" 
+                className={`nav-link-mobile block px-3 py-2 rounded-md text-center ${
+                  pathname === '/organizers' ? 'bg-orange-100 text-orange-700 font-semibold' : 'text-gray-700 hover:bg-gray-50'
+                }`}
+                onClick={closeMobileMenu}
+              >
+                Organizers
+              </Link>
+            </div>
           </div>
         </div>
       </div>
