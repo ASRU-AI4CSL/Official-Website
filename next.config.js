@@ -2,6 +2,8 @@
 const nextConfig = {
   output: 'export',
   trailingSlash: true,
+  basePath: '/ASRU-ChildWorkshopWebpage',
+  assetPrefix: '/ASRU-ChildWorkshopWebpage',
   experimental: {
     typedRoutes: true,
   },
