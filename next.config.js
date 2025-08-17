@@ -1,9 +1,10 @@
 /** @type {import('next').NextConfig} */
+const isProd = process.env.NODE_ENV === 'production';
 const nextConfig = {
   output: 'export',
   trailingSlash: true,
-  basePath: '/ASRU-ChildWorkshopWebpage',
-  assetPrefix: '/ASRU-ChildWorkshopWebpage',
+  basePath: isProd ? '/ASRU-ChildWorkshopWebpage' : '',
+  assetPrefix: isProd ? '/ASRU-ChildWorkshopWebpage' : '',
   experimental: {
     typedRoutes: true,
   },

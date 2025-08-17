@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import { eventJsonLd } from '../lib/seo'
 import { importantDates, workshopDate, registrationDates, DateUtils } from '../lib/dates'
 import externalUrls from '../data/externalurl.json'
@@ -58,15 +59,15 @@ export default function Page() {
                 </p>
                 
                 <div className="flex flex-wrap gap-4">
-                  <a className="btn-conference-primary" href="#register">
+                  <Link className="btn-conference-primary" href="/dates">
                     Register Now
                     <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                     </svg>
-                  </a>
-                  <a className="btn-conference-secondary" href="/cfp">
+                  </Link>
+                  <Link className="btn-conference-secondary" href="/cfp">
                     Call for Papers
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -83,12 +84,12 @@ export default function Page() {
               <p className="text-gray-700 leading-relaxed mb-6 text-sm">
                 Short (3pp) and regular (up to 6pp) submissions via OpenReview; single-blind, non-archival.
               </p>
-              <a className="btn-conference-primary" href="/cfp">
+              <Link className="btn-conference-primary" href="/cfp">
                 Read CFP
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
-              </a>
+              </Link>
             </div>
 
             <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
@@ -96,12 +97,12 @@ export default function Page() {
               <p className="text-gray-700 leading-relaxed mb-6 text-sm">
                 Afternoon program with invited talks, contributed papers, posters, and discussion.
               </p>
-              <a className="btn-conference-primary" href="/schedule">
+              <Link className="btn-conference-primary" href="/schedule">
                 See schedule
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
-              </a>
+              </Link>
             </div>
 
             <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
@@ -109,12 +110,12 @@ export default function Page() {
               <p className="text-gray-700 leading-relaxed mb-6 text-sm">
                 University of Hawaii campus, Honolulu (subject to change). Accessibility information included.
               </p>
-              <a className="btn-conference-primary" href="/venue">
+              <Link className="btn-conference-primary" href="/venue">
                 Plan your visit
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
-              </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -210,7 +211,7 @@ export default function Page() {
 
             {/* Additional Important Dates (link to full list) */}
             <div className="mt-8 bg-gray-50 rounded-xl p-6 text-center">
-              <a className="btn-conference-primary" href="/dates">View All Important Dates</a>
+              <Link className="btn-conference-primary" href="/dates">View All Important Dates</Link>
             </div>
           </div>
         </div>

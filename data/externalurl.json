@@ -1,5 +1,5 @@
 {
-  "register": "#register",
+  "register": "/dates",
   "submitPaper": "https://openreview.net/",
   "campusMap": "https://map.hawaii.edu/manoa/",
   "visitorParking": "https://manoa.hawaii.edu/commuter/visitors/",

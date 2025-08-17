@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import Hero from '../../../components/Hero'
 import ExternalImage from '../../../components/ExternalImage'
 import externalUrls from '../../../data/externalurl.json'
@@ -52,7 +53,7 @@ export default function Page() {
                 <a href="https://manoa.hawaii.edu/commuter/visitors/" target="_blank" rel="noopener" className="btn-conference-secondary">Visitor Parking</a>
               </div>
 
-              <a
+              <Link
                 href="/schedule"
                 className="btn-conference-primary"
               >
@@ -60,7 +61,7 @@ export default function Page() {
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
-              </a>
+              </Link>
             </div>
           </div>
         </div>
