@@ -19,8 +19,8 @@ export default function Page() {
       
       {/* Full-Width Hero Section - ASRU Inspired */}
       <section className="hero-fullwidth">
-        {/* Background Image */}
-        <div className="hero-background">
+        {/* Background Image - Hidden on mobile */}
+        <div className="hero-background hidden md:block">
           {heroImage && (
             <ExternalImage
               src={heroImage}
