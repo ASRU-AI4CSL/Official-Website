@@ -52,9 +52,13 @@ export default function Page() {
                   {workshopDate.date.toUpperCase()}
                 </div>
                 
-                <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-4 leading-tight">
-                  IEEE CHILD SPEECH AI 2025
+                <h2 className="text-4xl lg:text-5xl font-bold text-gradient mb-4 leading-normal">
+                  AI for Children's Speech and Language
                 </h2>
+                
+                <p className="text-lg text-gray-600 font-medium mb-4">
+                  ASRU 2025 Satellite Workshop
+                </p>
                 
                 <h3 className="text-2xl lg:text-3xl text-gray-700 mb-8 font-medium">
                   Fair • Precise • Interactive

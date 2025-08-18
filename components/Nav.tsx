@@ -4,6 +4,8 @@ import { usePathname } from 'next/navigation'
 import { useEffect, useRef, useState } from 'react'
 import { DateUtils } from '../lib/dates'
 import externalUrls from '../data/externalurl.json'
+import { normalizeExternalImageUrl } from '../lib/images'
+import ExternalImage from './ExternalImage'
 
 const navLinks = [
   { href: '/', label: 'Home' },
@@ -22,6 +24,7 @@ export default function Nav() {
   const [peopleOpen, setPeopleOpen] = useState(false)
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null)
+  const logoImageUrl = normalizeExternalImageUrl((externalUrls as any).logoImage || '')
 
   // Close mobile menu on route change
   useEffect(() => { setMobileMenuOpen(false) }, [pathname])
@@ -51,14 +54,26 @@ export default function Nav() {
           <div className="flex items-center justify-between py-4 lg:py-6 w-full">
             <Link
               href="/"
-              className="text-gradient font-bold text-lg lg:text-xl xl:text-2xl tracking-tight transition-colors duration-300 flex-shrink-0"
+              className="flex-shrink-0 transition-opacity duration-300 hover:opacity-80"
             >
-              <span className="hidden sm:inline">Child Speech AI Workshop</span>
-              <span className="sm:hidden">Child Speech AI</span>
+              {logoImageUrl ? (
+                <ExternalImage
+                  src={logoImageUrl}
+                  alt="AI for Children's Speech and Language"
+                  width={300}
+                  height={60}
+                  className="h-8 lg:h-10 xl:h-12 w-auto object-contain"
+                />
+              ) : (
+                <span className="text-gradient font-bold text-lg lg:text-xl xl:text-2xl tracking-tight">
+                  <span className="hidden sm:inline">AI for Children's Speech and Language</span>
+                  <span className="sm:hidden">AI Children's Speech</span>
+                </span>
+              )}
             </Link>
 
             {/* Desktop nav */}
-            <div className="hidden lg:flex gap-3 xl:gap-4 text-sm font-medium mx-4 xl:mx-6 flex-1 justify-center max-w-fit">
+            <div className="hidden lg:flex gap-3 xl:gap-4 text-sm font-medium mx-4 xl:mx-6 flex-1 justify-center">
               {navLinks.slice(0, 3).map(l => (
                 <Link key={l.href} href={l.href as any} className={`nav-link whitespace-nowrap ${pathname === l.href ? 'active' : ''}`}>
                   {l.label}
