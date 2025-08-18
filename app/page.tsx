@@ -26,9 +26,15 @@ export default function Page() {
               src={heroImage}
               alt=""
               fill
-              className="object-cover"
+              className="object-cover object-center w-full h-full"
               priority
-              sizes="100vw"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw"
+              style={{ 
+                width: '100%',
+                height: '100%',
+                objectFit: 'cover',
+                objectPosition: 'center center'
+              }}
             />
           )}
         </div>
@@ -210,7 +216,7 @@ export default function Page() {
             </div>
 
             {/* Additional Important Dates (link to full list) */}
-            <div className="mt-8 bg-gray-50 rounded-xl p-6 text-center">
+            <div className="mt-8 text-center">
               <Link className="btn-conference-primary" href="/dates">View All Important Dates</Link>
             </div>
           </div>

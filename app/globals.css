@@ -414,17 +414,33 @@ a:hover {
   overflow: hidden;
 }
 
+/* Responsive adjustments for hero */
+@media (max-width: 768px) {
+  .hero-fullwidth {
+    min-height: 80vh;
+  }
+}
+
+@media (min-width: 1400px) {
+  .hero-fullwidth {
+    min-height: 100vh;
+  }
+}
+
 .hero-background {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
+  width: 100%;
+  height: 100%;
   /* Use direct-view Google Drive URL to ensure image loads as background */
   background: url('https://drive.google.com/uc?export=view&id=1MBRiSu9c1sd7ULRSPLpfUEz6dPD9QcrX');
   background-size: cover;
-  background-position: center;
+  background-position: center center;
   background-repeat: no-repeat;
+  background-attachment: scroll;
   animation: heroShift 25s ease-in-out infinite;
 }
 
