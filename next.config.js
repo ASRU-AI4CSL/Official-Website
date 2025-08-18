@@ -3,8 +3,8 @@ const isProd = process.env.NODE_ENV === 'production';
 const nextConfig = {
   output: 'export',
   trailingSlash: true,
-  basePath: isProd ? '/ASRU-ChildWorkshopWebpage' : '',
-  assetPrefix: isProd ? '/ASRU-ChildWorkshopWebpage' : '',
+  basePath: isProd ? '/Official-Website' : '',
+  assetPrefix: isProd ? '/Official-Website' : '',
   experimental: {
     typedRoutes: true,
   },
