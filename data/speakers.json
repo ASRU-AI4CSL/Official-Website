@@ -48,18 +48,6 @@
     "room": "Main Hall"
   },
   {
-    "slug": "carol-espy-wilson",
-    "name": "Carol Espy-Wilson",
-    "affiliation": "University of Maryland",
-    "role": "Invited Speaker",
-    "image": "https://drive.google.com/file/d/10tI2qfQN9HwUkOkcS-oGKDiUIp_Wx94e/view?usp=drive_link",
-    "website": "#",
-    "talkTitle": "Invited Talk 3 – [TBD]",
-    "talkDescription": "Invited talk. Title to be announced.",
-    "time": "15:50–16:20",
-    "room": "Main Hall"
-  },
-  {
     "slug": "tiantian-feng",
     "name": "Tiantian Feng",
     "affiliation": "University of Southern California",
