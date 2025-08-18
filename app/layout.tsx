@@ -1,5 +1,6 @@
 import './globals.css'
 import type { Metadata } from 'next'
+import Link from 'next/link'
 import Nav from '../components/Nav'
 
 export const metadata: Metadata = {
@@ -33,12 +34,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <div className="container py-12 text-center">
             <p className="text-sm text-gray-600">
               © {new Date().getFullYear()} Child Speech AI Workshop • 
-              <a 
+              <Link 
                 href="/coc" 
                 className="ml-1 text-gradient font-medium hover:scale-105 transition-transform inline-block"
               >
                 Code of Conduct
-              </a>
+              </Link>
             </p>
           </div>
         </footer>

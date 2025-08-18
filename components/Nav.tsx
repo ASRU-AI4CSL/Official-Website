@@ -99,13 +99,13 @@ export default function Nav() {
 
             {/* Desktop buttons */}
             <div className="hidden lg:flex items-center gap-3 xl:gap-4 text-sm font-medium flex-shrink-0">
-              <a className="btn-conference-secondary whitespace-nowrap flex items-center gap-1" href={(externalUrls as any).register}>
+              <Link className="btn-conference-secondary whitespace-nowrap flex items-center gap-1" href="/dates">
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
                 </svg>
                 <span className="hidden lg:inline">Register (Free)</span>
                 <span className="lg:hidden">Register</span>
-              </a>
+              </Link>
               <a
                 className="btn-conference-primary whitespace-nowrap flex items-center gap-1"
                 href={(externalUrls as any).submitPaper}
@@ -184,12 +184,12 @@ export default function Nav() {
 
               <div className="border-t border-gray-200 pt-4 px-4">
                 <div className="space-y-3">
-                  <a className="btn-conference-secondary w-full flex items-center justify-center gap-2 py-3 px-4" href={(externalUrls as any).register} onClick={closeMobileMenu}>
+                  <Link className="btn-conference-secondary w-full flex items-center justify-center gap-2 py-3 px-4" href="/dates" onClick={closeMobileMenu}>
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7-7z" />
                     </svg>
                     Register (Free)
-                  </a>
+                  </Link>
                   <a
                     className="btn-conference-primary w-full flex items-center justify-center gap-2 py-3 px-4"
                     href={(externalUrls as any).submitPaper}
