@@ -49,8 +49,8 @@ export default function Page() {
               </p>
 
               <div className="flex flex-wrap gap-3 mb-6">
-                <a href="https://map.hawaii.edu/manoa/" target="_blank" rel="noopener" className="btn-conference-secondary">Open Campus Map</a>
-                <a href="https://manoa.hawaii.edu/commuter/visitors/" target="_blank" rel="noopener" className="btn-conference-secondary">Visitor Parking</a>
+                <a href={(externalUrls as any).campusMap} target="_blank" rel="noopener" className="btn-conference-secondary">Open Campus Map</a>
+                <a href={(externalUrls as any).visitorParking} target="_blank" rel="noopener" className="btn-conference-secondary">Visitor Parking</a>
               </div>
 
               <Link
@@ -82,7 +82,7 @@ export default function Page() {
                   <p className="text-gray-600 text-sm">
                     HNL is ~8 miles from UH Mānoa (20–30 minutes by car, traffic dependent). See official ground options for taxis, ride apps, shuttles, and public transit.
                     <br />
-                    <a className="text-orange-700 underline" href="https://airports.hawaii.gov/hnl/getting-to-from/ground-transportation/" target="_blank" rel="noopener">HNL Ground Transportation</a>
+                    <a className="text-orange-700 underline" href={(externalUrls as any).hnlGroundTransportation} target="_blank" rel="noopener">HNL Ground Transportation</a>
                   </p>
                 </div>
                 <div className="border-l-4 border-orange-500 pl-4">
@@ -90,7 +90,7 @@ export default function Page() {
                   <p className="text-gray-600 text-sm">
                     The City &amp; County of Honolulu’s TheBus serves HNL and stops near UH Mānoa. Use the route info/trip planner to find current options.
                     <br />
-                    <a className="text-orange-700 underline" href="https://airports.hawaii.gov/hnl/getting-to-from/ground-transportation/the-bus/" target="_blank" rel="noopener">TheBus from HNL</a>
+                    <a className="text-orange-700 underline" href={(externalUrls as any).hnlTheBus} target="_blank" rel="noopener">TheBus from HNL</a>
                   </p>
                 </div>
               </div>
@@ -105,7 +105,7 @@ export default function Page() {
                   <p className="text-gray-600 text-sm">
                     Visitor parking is available in designated lots and structures; payment is via JustPark app or attendant where noted. Rates and availability may change—check the official page.
                     <br />
-                    <a className="text-orange-700 underline" href="https://manoa.hawaii.edu/commuter/visitors/" target="_blank" rel="noopener">UH Mānoa Visitor Parking</a>
+                    <a className="text-orange-700 underline" href={(externalUrls as any).visitorParking} target="_blank" rel="noopener">UH Mānoa Visitor Parking</a>
                   </p>
                 </div>
                 <div className="border-l-4 border-orange-500 pl-4">
@@ -113,7 +113,7 @@ export default function Page() {
                   <p className="text-gray-600 text-sm">
                     We aim to provide accessible routes, seating, and quiet rooms. Reach out with specific needs; campus resources are available.
                     <br />
-                    <a className="text-orange-700 underline" href="https://www.hawaii.edu/access/" target="_blank" rel="noopener">Accessibility at UH</a>
+                    <a className="text-orange-700 underline" href={(externalUrls as any).accessibilityAtUh} target="_blank" rel="noopener">Accessibility at UH</a>
                   </p>
                 </div>
               </div>

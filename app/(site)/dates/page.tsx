@@ -1,5 +1,5 @@
 import Hero from '../../../components/Hero'
-import { IMPORTANT_DATES } from '../../../lib/dates'
+import { DateUtils } from '../../../lib/dates'
 
 export const metadata = { title: 'Important Dates — Child Speech AI Workshop' }
 
@@ -26,7 +26,7 @@ export default function Page() {
           {/* Desktop: centered vertical line; Mobile: per-item left line */}
           <div className="relative">
             <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 w-px bg-gray-200" />
-            {IMPORTANT_DATES.map((d, idx) => {
+            {DateUtils.getDatesPageDates().map((d, idx) => {
               const colors = colorMap[d.color]
               const content = (
                 <div className={`bg-white rounded-xl p-5 shadow-lg border-l-4 ${colors.border}`}>

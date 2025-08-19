@@ -16,6 +16,7 @@ export interface ImportantDate {
   priority: 'high' | 'medium' | 'low'
   showOnHomepage?: boolean
   showOnCFP?: boolean
+  showOnDatesPage?: boolean
 }
 
 type DatesJson = {
@@ -64,6 +65,7 @@ export const DateUtils = {
   // Get dates filtered by display location
   getHomepageDates: () => IMPORTANT_DATES.filter(d => d.showOnHomepage),
   getCFPDates: () => IMPORTANT_DATES.filter(d => d.showOnCFP),
+  getDatesPageDates: () => IMPORTANT_DATES.filter(d => d.showOnDatesPage !== false),
   
   // Get dates filtered by priority
   getHighPriorityDates: () => IMPORTANT_DATES.filter(d => d.priority === 'high'),
