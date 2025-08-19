@@ -9,7 +9,7 @@ import ExternalImage from './ExternalImage'
 
 const navLinks = [
   { href: '/', label: 'Home' },
-  { href: '/cfp', label: 'CFP' },
+  { href: '/cfp', label: 'Call for Papers' },
   { href: '/schedule', label: 'Schedule' },
   { href: '/dates', label: 'Dates' },
   { href: '/venue', label: 'Venue' },
