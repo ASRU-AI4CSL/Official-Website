@@ -69,7 +69,7 @@ export default function Page() {
     <>
       <Hero
         title="Organizers"
-        subtitle="Meet the ASRU 2025 Organizing Committee dedicated to advancing the field with expert leadership, planning events, and fostering professional connections."
+        subtitle="Meet the ASRU 2025 AI4CSL Organizing Committee dedicated to advancing the field with expert leadership, planning events, and fostering professional connections."
         variant="orangePink"
       />
 
