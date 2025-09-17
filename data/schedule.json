@@ -4,7 +4,7 @@
     "type": "session",
     "title": "Opening Remarks",
     "description": "Welcome and overview of goals and logistics.",
-    "room": "Main Hall",
+    "room": "CC308",
     "image": "https://drive.google.com/file/d/1aaHF60o7pjSkk0m39b6adX6_Dfo8rKzh/view?usp=drive_link"
   },
   {
@@ -13,7 +13,7 @@
     "speakerNames": [
       "Abeer Alwan"
     ],
-    "room": "Main Hall",
+    "room": "CC308",
     "image": ""
   },
   {
@@ -22,7 +22,7 @@
     "speakerNames": [
       "Mark Hasegawa-Johnson"
     ],
-    "room": "Main Hall",
+    "room": "CC308",
     "image": ""
   },
   {
@@ -31,7 +31,7 @@
     "speakerNames": [
       "Gopala Anumanchipalli"
     ],
-    "room": "Main Hall",
+    "room": "CC308",
     "image": ""
   },
   {
@@ -49,7 +49,7 @@
       "Corey Miller",
       "Carol Espy-Wilson"
     ],
-    "room": "Main Hall",
+    "room": "CC308",
     "image": ""
   },
   {
@@ -58,7 +58,7 @@
     "speakerNames": [
       "Tiantian Feng"
     ],
-    "room": "Main Hall",
+    "room": "CC308",
     "image": ""
   },
   {
@@ -66,7 +66,7 @@
     "type": "session",
     "title": "Poster Session",
     "description": "Poster presentations and discussion with presenters.",
-    "room": "Main Hall",
+    "room": "CC308",
     "image": "https://drive.google.com/file/d/1-ho3J9pjPtpPEQj7HhjiO4gVLSmVSDBN/view?usp=drive_link"
   },
   {
@@ -74,7 +74,7 @@
     "type": "session",
     "title": "Closing Remarks",
     "description": "Wrap-up and closing.",
-    "room": "Main Hall",
+    "room": "CC308",
     "image": "https://drive.google.com/file/d/1-61KkPGHCLGijcCNgqxUc-5gzKscIgVx/view?usp=drive_link"
   }
 ]

@@ -9,7 +9,7 @@
     "talkTitle": "Keynote: [TBD]",
     "talkDescription": "Keynote address. Title to be announced.",
     "time": "14:05–14:35",
-    "room": "Main Hall"
+    "room": "CC308"
   },
   {
     "slug": "mark-hasegawa-johnson",
@@ -21,7 +21,7 @@
     "talkTitle": "Invited Talk 1 – [TBD]",
     "talkDescription": "Invited talk. Title to be announced.",
     "time": "14:35–15:05",
-    "room": "Main Hall"
+    "room": "CC308"
   },
   {
     "slug": "gopala-anumanchipalli",
@@ -33,7 +33,7 @@
     "talkTitle": "Invited Talk 2 – [TBD]",
     "talkDescription": "Invited talk. Title to be announced.",
     "time": "15:05–15:35",
-    "room": "Main Hall"
+    "room": "CC308"
   },
   {
     "slug": "corey-miller",
@@ -45,7 +45,7 @@
     "talkTitle": "Invited Talk 3 – [TBD]",
     "talkDescription": "Invited talk. Title to be announced.",
     "time": "15:50–16:20",
-    "room": "Main Hall"
+    "room": "CC308"
   },
   {
     "slug": "tiantian-feng",
@@ -57,6 +57,6 @@
     "talkTitle": "Invited Talk 4 – [TBD]",
     "talkDescription": "Invited talk. Title to be announced.",
     "time": "16:20–16:50",
-    "room": "Main Hall"
+    "room": "CC308"
   }
 ]

@@ -10,7 +10,7 @@ export default function Page() {
     <>
       <Hero
         title="Venue"
-        subtitle="The Child Speech AI Workshop takes place at the University of Hawai‘i at Mānoa campus in Honolulu, Hawai‘i. Specific room is TBD."
+        subtitle="The Child Speech AI Workshop takes place at the University of Hawai‘i at Mānoa campus in Honolulu, Hawai‘i. Specific room is CC308."
         variant="emeraldTeal"
       />
 
@@ -22,7 +22,7 @@ export default function Page() {
               University of Hawai‘i at Mānoa
             </h2>
             <p className="text-xl text-gray-600 mb-2">
-              Honolulu, Hawai‘i (Room: TBD)
+              Honolulu, Hawai‘i (Room: CC308)
             </p>
             <p className="text-gray-600">
               2500 Campus Rd<br />
