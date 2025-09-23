@@ -47,7 +47,7 @@
     },
     {
       "id": "submission-deadline",
-      "date": "October 1, 2025",
+      "date": "October 31, 2025",
       "title": "Paper Submission Deadline",
       "description": "Final deadline for paper submissions",
       "type": "deadline",
@@ -107,4 +107,3 @@
     }
   ]
 }
-

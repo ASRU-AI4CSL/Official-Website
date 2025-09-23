@@ -14,6 +14,46 @@ export default function Page() {
         variant="roseFuchsia"
       />
 
+      {/* Submission Highlights */}
+      <section className="py-12 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-orange-50 rounded-xl p-8 border border-orange-200 shadow-sm">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">Submission Highlights</h2>
+              <p className="text-gray-700 mb-6">
+                We want to make it easy for you to share your work with the community. Here are a few updates to
+                keep in mind while preparing your materials:
+              </p>
+              <ul className="space-y-3">
+                <li className="flex items-start gap-2">
+                  <span className="text-orange-600">•</span>
+                  <span>The submission deadline is extended to October 31, 2025.</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-orange-600">•</span>
+                  <span>
+                    We welcome submissions that are under review elsewhere or already published—just note the
+                    original venue so reviewers understand the context.
+                  </span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-orange-600">•</span>
+                  <span>Dual submission is allowed where compatible with the policies of other venues.</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-orange-600">•</span>
+                  <span>The program committee will recognize multiple Best Paper Award recipients.</span>
+                </li>
+                <li className="flex items-start gap-2">
+                  <span className="text-orange-600">•</span>
+                  <span>Presenting authors may participate remotely; in-person attendance is welcome but not required.</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Workshop Description */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
@@ -134,20 +174,6 @@ export default function Page() {
                   </li>
                 </ul>
               </div>
-            </div>
-            
-            <div className="mt-8 bg-orange-50 rounded-xl p-6 border border-orange-200">
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Policies</h3>
-              <ul className="space-y-2">
-                <li className="flex items-start gap-2">
-                  <span className="text-orange-600">•</span>
-                  <span>Dual submission allowed where compatible with venue policy</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-orange-600">•</span>
-                  <span>Presenting author expected to attend in person (remote exceptions for visa/travel difficulties)</span>
-                </li>
-              </ul>
             </div>
           </div>
         </div>
