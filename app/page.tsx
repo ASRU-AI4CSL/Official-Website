@@ -13,6 +13,9 @@ export const metadata = {
 
 export default function Page() {
   const heroImage = normalizeExternalImageUrl((externalUrls as any).heroImage || '')
+  const registerUrl = (externalUrls as any).register
+  const registerTarget = registerUrl?.startsWith('http') ? '_blank' : undefined
+  const registerRel = registerUrl?.startsWith('http') ? 'noopener' : undefined
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(eventJsonLd()) }} />
@@ -69,12 +72,17 @@ export default function Page() {
                 </p>
                 
                 <div className="flex flex-wrap gap-4">
-                  <Link className="btn-conference-primary" href="/dates">
+                  <a
+                    className="btn-conference-primary"
+                    href={registerUrl}
+                    target={registerTarget}
+                    rel={registerRel}
+                  >
                     Register Now
                     <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                     </svg>
-                  </Link>
+                  </a>
                   <Link className="btn-conference-secondary" href="/cfp">
                     Call for Papers
                   </Link>
