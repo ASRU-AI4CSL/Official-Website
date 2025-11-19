@@ -3,7 +3,7 @@
 A Next.js 14 workshop website with App Router, TypeScript, Tailwind CSS, and JSON-based content management. Features automated GitHub Pages deployment and external image support.
 
 ## Features
-- **Pages**: Home, CFP, Schedule, Speakers, Organizers, Venue, FAQ, Dates, Code of Conduct
+- **Pages**: Home, Accepted Papers, Schedule, Speakers, Organizers, Venue, FAQ, Dates, Code of Conduct
 - **Content Management**: JSON-based data files for easy updates
 - **Images**: External image support (Google Drive, CDN links)
 - **SEO**: JSON-LD structured data, OpenGraph, Twitter cards
@@ -179,7 +179,7 @@ All images are hosted externally (Google Drive, CDN, etc.) and referenced by URL
 ```
 ├── app/                    # Next.js App Router pages
 │   ├── (site)/            # Grouped routes 
-│   │   ├── cfp/           # Call for Papers
+│   │   ├── cfp/           # Accepted papers (program reveal)
 │   │   ├── speakers/      # Speaker profiles
 │   │   ├── organizers/    # Organizer profiles  
 │   │   ├── schedule/      # Event schedule

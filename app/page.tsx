@@ -84,7 +84,7 @@ export default function Page() {
                     </svg>
                   </a>
                   <Link className="btn-conference-secondary" href="/cfp">
-                    Call for Papers
+                    Accepted Papers
                   </Link>
                 </div>
               </div>
@@ -98,12 +98,12 @@ export default function Page() {
         <div className="container mx-auto px-4">
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3 max-w-5xl mx-auto">
             <div className="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
-              <h3 className="text-xl font-bold text-orange-600 mb-4">Submit</h3>
+              <h3 className="text-xl font-bold text-orange-600 mb-4">Accepted Papers</h3>
               <p className="text-gray-700 leading-relaxed mb-6 text-sm">
-                Short (3pp) and regular (up to 6pp) submissions via OpenReview; single-blind, non-archival.
+                Browse the 2025 program reveal, award highlights, and thematic groupings of the selected work.
               </p>
               <Link className="btn-conference-primary" href="/cfp">
-                Call for Papers
+                Meet the authors
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>

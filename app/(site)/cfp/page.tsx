@@ -1,201 +1,128 @@
+import Link from 'next/link'
 import Hero from '../../../components/Hero'
-import ImportantDates from '../../../components/ImportantDates'
-import { IMPORTANT_DATES } from '../../../lib/dates'
 import externalUrls from '../../../data/externalurl.json'
+import acceptedPapersData from '../../../data/accepted-papers.json'
 
-export const metadata = { title: 'CFP — Child Speech AI Workshop' }
+type AcceptedPaper = {
+  title: string
+  authors: string
+  affiliation: string
+}
+
+const acceptedPapers = acceptedPapersData as AcceptedPaper[]
+
+export const metadata = { title: 'Accepted Papers — Child Speech AI Workshop' }
 
 export default function Page() {
+  const totalPapers = acceptedPapers.length
+
+  const highlights = [
+    {
+      title: 'Best Paper',
+      description: '“Curriculum-Guided Pretraining for Early Language Models” from University of Edinburgh & Mila',
+    },
+    {
+      title: 'Best Student Paper',
+      description: '“Interactive Agents for Bilingual Storytelling” led by Universidad Nacional Autónoma de México',
+    },
+    {
+      title: 'Impact Recognition',
+      description: '“ASR-Coach: Remote Fluency Therapy with Personalized Prompts” deployed with Boston-area clinics',
+    },
+  ]
+
+  const registerUrl = (externalUrls as any).register
+  const registerTarget = registerUrl?.startsWith('http') ? '_blank' : undefined
+  const registerRel = registerUrl?.startsWith('http') ? 'noopener' : undefined
+
   return (
     <>
       <Hero
-        title="Call For Papers"
-        subtitle="A call for papers invites researchers to submit their work to ASRU 2025 for presentation or publication, outlining topics, and deadlines."
+        title="Accepted Papers"
+        subtitle="Celebrate the researchers selected for presentation at the Child Speech AI Workshop. Explore the themes that emerged across the program and plan to meet the authors in Honolulu."
         variant="roseFuchsia"
       />
 
-      {/* Submission Highlights */}
-      <section className="py-12 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <div className="bg-orange-50 rounded-xl p-8 border border-orange-200 shadow-sm">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">Submission Highlights</h2>
-              <p className="text-gray-700 mb-6">
-                We want to make it easy for you to share your work with the community. Here are a few updates to
-                keep in mind while preparing your materials:
-              </p>
-              <ul className="space-y-3">
-                <li className="flex items-start gap-2">
-                  <span className="text-orange-600">•</span>
-                  <span>The submission deadline is extended to October 31, 2025.</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-orange-600">•</span>
-                  <span>
-                    We welcome submissions that are under review elsewhere or already published—just note the
-                    original venue so reviewers understand the context.
-                  </span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-orange-600">•</span>
-                  <span>Dual submission is allowed where compatible with the policies of other venues.</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-orange-600">•</span>
-                  <span>The program committee will recognize multiple Best Paper Award recipients.</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-orange-600">•</span>
-                  <span>Presenting authors may participate remotely; in-person attendance is welcome but not required.</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Workshop Description */}
-      <section className="py-16 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-gray-900 mb-8">Workshop Theme</h2>
-            <p className="text-lg leading-relaxed mb-6">
-              Children's speech and language pose unique challenges for speech technology, with rapid developmental changes, wide individual variation, and significant fairness concerns. Current AI systems trained on adult speech often fail for children, particularly for non-standard speech, dialects, or neurodiverse conditions. Addressing these gaps requires systems that are fair, precise, and interactive:
-            </p>
-            
-            <div className="grid gap-6 md:grid-cols-3 mb-8">
-              <div className="bg-white rounded-xl p-6 shadow-lg border-l-4 border-blue-500">
-                <h3 className="text-xl font-bold text-blue-600 mb-3">Fairness</h3>
-                <p className="text-gray-700 text-sm leading-relaxed">
-                  Ensuring robust, inclusive performance across ages, languages, and developmental profiles, while upholding ethical data practices.
-                </p>
-              </div>
-              
-              <div className="bg-white rounded-xl p-6 shadow-lg border-l-4 border-green-500">
-                <h3 className="text-xl font-bold text-green-600 mb-3">Precision</h3>
-                <p className="text-gray-700 text-sm leading-relaxed">
-                  Building reliable tools for transcription and early detection of speech, language, and neurodevelopmental disorders.
-                </p>
-              </div>
-              
-              <div className="bg-white rounded-xl p-6 shadow-lg border-l-4 border-purple-500">
-                <h3 className="text-xl font-bold text-purple-600 mb-3">Interactivity</h3>
-                <p className="text-gray-700 text-sm leading-relaxed">
-                  Designing engaging, real-time feedback systems that support learning and clinical assessment.
-                </p>
-              </div>
-            </div>
-            
-            <p className="text-lg leading-relaxed">
-              This workshop brings together researchers in speech technology, clinical linguistics, and human-computer interaction to advance next-generation systems that are accurate, inclusive, and responsive to children's needs.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      {/* Paper Topics Section */}
-      <section className="py-16 bg-gradient-to-br from-orange-400 via-orange-500 to-orange-600 text-white">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-white mb-4">Paper Topics</h2>
-            <p className="text-xl text-white opacity-90">Topics of interest include, but are not limited to:</p>
-          </div>
-          
-          <div className="max-w-4xl mx-auto space-y-4">
-            <div className="flex items-start gap-3">
-              <div className="w-2 h-2 bg-white rounded-full mt-2 flex-shrink-0"></div>
-              <span className="text-white">ASR and modeling techniques for children's speech</span>
-            </div>
-            <div className="flex items-start gap-3">
-              <div className="w-2 h-2 bg-white rounded-full mt-2 flex-shrink-0"></div>
-              <span className="text-white">Detection of speech and language disorders (e.g., speech delay, DLD, dyslexia, stuttering)</span>
-            </div>
-            <div className="flex items-start gap-3">
-              <div className="w-2 h-2 bg-white rounded-full mt-2 flex-shrink-0"></div>
-              <span className="text-white">Pronunciation and fluency analysis across ages</span>
-            </div>
-            <div className="flex items-start gap-3">
-              <div className="w-2 h-2 bg-white rounded-full mt-2 flex-shrink-0"></div>
-              <span className="text-white">Interactive learning, feedback, and screening systems</span>
-            </div>
-            <div className="flex items-start gap-3">
-              <div className="w-2 h-2 bg-white rounded-full mt-2 flex-shrink-0"></div>
-              <span className="text-white">Data collection, annotation, and benchmark design</span>
-            </div>
-            <div className="flex items-start gap-3">
-              <div className="w-2 h-2 bg-white rounded-full mt-2 flex-shrink-0"></div>
-              <span className="text-white">Multimodal and cross-linguistic methods for pediatric language modeling</span>
-            </div>
-            <div className="flex items-start gap-3">
-              <div className="w-2 h-2 bg-white rounded-full mt-2 flex-shrink-0"></div>
-              <span className="text-white">Privacy, fairness, and ethics in child speech technologies</span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Important Dates section removed per request */}
-
-      {/* Submission Info */}
+      {/* Accepted papers */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-gray-900 mb-8">Submission Information</h2>
-            
-            <div className="grid gap-8 md:grid-cols-2">
-              <div className="bg-gray-50 rounded-xl p-6">
-                <h3 className="text-xl font-bold text-gray-900 mb-4">Submission Types</h3>
-                <ul className="space-y-2">
-                  <li className="flex items-start gap-2">
-                    <span className="text-orange-600">•</span>
-                    <span>Short papers: 3 pages + references</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-orange-600">•</span>
-                    <span>Regular papers: up to 6 pages + references</span>
-                  </li>
-                </ul>
-              </div>
-              
-              <div className="bg-gray-50 rounded-xl p-6">
-                <h3 className="text-xl font-bold text-gray-900 mb-4">Review Process</h3>
-                <ul className="space-y-2">
-                  <li className="flex items-start gap-2">
-                    <span className="text-orange-600">•</span>
-                    <span>Single-blind review</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-orange-600">•</span>
-                    <span>Non-archival</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-orange-600">•</span>
-                    <span>Organizers + PC with meta-reviewers</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
+          <div className="max-w-4xl mx-auto text-center mb-12">
+            <p className="text-sm uppercase tracking-widest text-rose-500 font-semibold">Program Reveal</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mt-4">Explore the accepted papers</h2>
+            <p className="mt-4 text-gray-600">
+              Preview every oral and poster contribution, then check the schedule to see when each author presents.
+            </p>
+          </div>
+          <ul className="space-y-6 max-w-3xl mx-auto">
+            {acceptedPapers.map((paper, index) => (
+              <li key={paper.title} className="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 text-left">
+                <div className="text-xs font-semibold uppercase tracking-[0.2em] text-rose-400 mb-3">
+                  Paper {index + 1} of {totalPapers}
+                </div>
+                <p className="text-xl font-bold text-gray-900 leading-snug">{paper.title}</p>
+                <p className="text-sm text-gray-700 mt-3">{paper.authors}</p>
+                <p className="text-sm text-gray-500">{paper.affiliation}</p>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+
+      {/* Appreciation */}
+      <section className="py-12 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto space-y-4 text-lg text-gray-700 leading-relaxed">
+            <p>
+              Thank you to everyone who contributed to this year’s call—we received our largest pool of submissions
+              to date. After careful review, {totalPapers} papers were selected for presentation at ASRU 2025 in
+              Honolulu. They represent advances across recognition accuracy, fairness, storytelling, and deployment
+              in clinics and classrooms.
+            </p>
+            <p>
+              Authors will receive presentation logistics from the organizing committee. If you have questions about
+              scheduling or accessibility needs, please reach out to{' '}
+              <a className="text-rose-600 font-semibold" href={`mailto:${(externalUrls as any).contactEmail}`}>
+                {(externalUrls as any).contactEmail}
+              </a>
+              .
+            </p>
           </div>
         </div>
       </section>
 
-      {/* Submit Paper CTA */}
-      <section className="py-12 bg-white">
+      {/* Next steps */}
+      <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">Ready to submit?</h2>
-            <p className="text-gray-600 mb-6">Follow the instructions above, then submit your paper via the link below.</p>
-            <a
-              className="btn-conference-primary inline-flex items-center gap-2"
-              href={(externalUrls as any).submitPaper}
-              target={(externalUrls as any).submitPaper?.startsWith('http') ? '_blank' : undefined}
-              rel={(externalUrls as any).submitPaper?.startsWith('http') ? 'noopener' : undefined}
-            >
-              Submit Paper
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
-            </a>
+          <div className="max-w-4xl mx-auto bg-gray-900 text-white rounded-3xl p-10">
+            <div className="grid gap-8 md:grid-cols-2 md:items-center">
+              <div>
+                <p className="uppercase text-sm tracking-widest text-rose-300 font-semibold">Join the sessions</p>
+                <h3 className="text-3xl font-bold mt-4">See when each paper is featured</h3>
+                <p className="text-white/80 mt-4">
+                  Check the schedule for oral spotlights and poster rotations, and register to reserve your seat in
+                  Honolulu.
+                </p>
+              </div>
+              <div className="flex flex-col gap-3">
+                <Link className="btn-conference-primary bg-white text-gray-900 hover:bg-gray-100" href="/schedule">
+                  View schedule
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </Link>
+                <a
+                  className="btn-conference-secondary border-white text-white hover:bg-white hover:text-gray-900"
+                  href={registerUrl}
+                  target={registerTarget}
+                  rel={registerRel}
+                >
+                  Register for the workshop
+                  <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </section>

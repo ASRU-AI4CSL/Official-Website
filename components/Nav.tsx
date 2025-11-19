@@ -9,7 +9,7 @@ import ExternalImage from './ExternalImage'
 
 const navLinks = [
   { href: '/', label: 'Home' },
-  { href: '/cfp', label: 'Call for Papers' },
+  { href: '/cfp', label: 'Accepted Papers' },
   { href: '/schedule', label: 'Schedule' },
   { href: '/dates', label: 'Dates' },
   { href: '/venue', label: 'Venue' },
@@ -129,18 +129,16 @@ export default function Nav() {
                 <span className="hidden lg:inline">Register (Free)</span>
                 <span className="lg:hidden">Register</span>
               </a>
-              <a
+              <Link
                 className="btn-conference-primary whitespace-nowrap flex items-center gap-1"
-                href={(externalUrls as any).submitPaper}
-                target={(externalUrls as any).submitPaper?.startsWith('http') ? '_blank' : undefined}
-                rel={(externalUrls as any).submitPaper?.startsWith('http') ? 'noopener' : undefined}
+                href="/cfp"
               >
                 <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                 </svg>
-                <span className="hidden lg:inline">Submit Paper</span>
-                <span className="lg:hidden">Submit</span>
-              </a>
+                <span className="hidden lg:inline">Accepted Papers</span>
+                <span className="lg:hidden">Papers</span>
+              </Link>
             </div>
 
             {/* Mobile hamburger */}
@@ -219,18 +217,16 @@ export default function Nav() {
                     </svg>
                     Register (Free)
                   </a>
-                  <a
+                  <Link
                     className="btn-conference-primary w-full flex items-center justify-center gap-2 py-3 px-4"
-                    href={(externalUrls as any).submitPaper}
-                    target={(externalUrls as any).submitPaper?.startsWith('http') ? '_blank' : undefined}
-                    rel={(externalUrls as any).submitPaper?.startsWith('http') ? 'noopener' : undefined}
+                    href="/cfp"
                     onClick={closeMobileMenu}
                   >
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                     </svg>
-                    Submit Paper
-                  </a>
+                    Accepted Papers
+                  </Link>
                 </div>
               </div>
             </div>

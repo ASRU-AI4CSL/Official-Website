@@ -27,7 +27,7 @@ All dates across the website are managed from a single file: `/lib/dates.ts`. Th
   color: 'red', // Color for UI display
   priority: 'high', // 'high', 'medium', or 'low'
   showOnHomepage: true, // Show on homepage?
-  showOnCFP: false // Show on CFP page?
+  showOnCFP: false // Show on Accepted Papers (cfp) page?
 }
 ```
 
@@ -49,7 +49,7 @@ Array of all dates with properties:
 - **color**: UI color theme
 - **priority**: Importance level
 - **showOnHomepage**: Display on homepage important dates section
-- **showOnCFP**: Display on Call for Papers page
+- **showOnCFP**: Display on Accepted Papers (legacy Call for Papers) page
 
 ### Date Types
 - `deadline`: Important deadlines (red color recommended)
@@ -75,7 +75,7 @@ The `DateUtils` object provides helpful functions:
 ```typescript
 DateUtils.getDeadlines() // Get all deadline dates
 DateUtils.getHomepageDates() // Get dates shown on homepage
-DateUtils.getCFPDates() // Get dates shown on CFP page
+DateUtils.getCFPDates() // Get dates flagged for the Accepted Papers (legacy CFP) page
 DateUtils.getHighPriorityDates() // Get high priority dates
 ```
 
@@ -136,9 +136,8 @@ const submissionDeadline = DateUtils.getSubmissionDeadline()
    - Paper submission deadlines
    - Registration dates
 
-2. **CFP Page** (`/app/(site)/cfp/page.tsx`):
-   - Important dates timeline
-   - All submission-related dates
+2. **Accepted Papers Page** (`/app/(site)/cfp/page.tsx`):
+   - Previously showed a submission timeline; keep `showOnCFP` flags updated for future CFP cycles
 
 3. **Schedule Page** (`/app/(site)/schedule/page.tsx`):
    - Workshop date in hero section
@@ -169,7 +168,7 @@ const submissionDeadline = DateUtils.getSubmissionDeadline()
 ## Troubleshooting
 
 ### Date Not Appearing
-1. Check `showOnHomepage` or `showOnCFP` flags
+1. Check `showOnHomepage` or `showOnCFP` (Accepted Papers page) flags
 2. Verify the date ID is unique
 3. Ensure proper TypeScript syntax
 
@@ -213,6 +212,6 @@ The system is designed to be extended with:
 
 This date will automatically appear on:
 - Homepage important dates section
-- CFP page timeline
+- Accepted Papers page timeline (legacy CFP)
 - Any component using `DateUtils.getDeadlines()`
 - Any component using `DateUtils.getHomepageDates()`

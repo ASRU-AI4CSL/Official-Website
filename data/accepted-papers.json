@@ -1,0 +1,32 @@
+[
+  {
+    "title": "K-FUNCTION: JOINT PRONUNCIATION TRANSCRIPTION AND FEEDBACK FOR EVALUATING KIDS LANGUAGE FUNCTION",
+    "authors": "Chenxu Guo1, Shuhe Li1, Jiachen Lian, Cheol Jun Cho, Elise Brenner, Francesca Pei, Maria Luisa Gorno-Tempini, Gopala Anumanchipalli",
+    "affiliation": "Zhejiang University, UC Berkeley, UCSF"
+  },
+  {
+    "title": "Comparing Unsupervised and Supervised Semantic Speech Tokens: A Case Study of Child ASR",
+    "authors": "Mohan Shi, Natarajan Balaji Shankar, Kaiyuan Zhang, Zilai Wang, Abeer Alwan",
+    "affiliation": "University of California Los Angeles"
+  },
+  {
+    "title": "CAN LARGE AUDIO LANGUAGE MODELS UNDERSTAND CHILD STUTTERING SPEECH? SPEECH SUMMARIZATION, AND SOURCE SEPARATION",
+    "authors": "Chibuzor Okocha, Maya Bakri and Christan Grant",
+    "affiliation": "University of Florida, Lebanese American University"
+  },
+  {
+    "title": "Group-Aware Partial Model Merging for Children’s Automatic Speech recognition",
+    "authors": "Thomas Rolland and Alberto Abad",
+    "affiliation": "INESC-ID, Universidade de Lisboa"
+  },
+  {
+    "title": "TICL+: A CASE STUDY ON SPEECH IN-CONTEXT LEARNING FOR CHILDREN’S SPEECH RECOGNITION",
+    "authors": "Haolong Zheng, Yekaterina Yegorova, Mark Hasegawa-Johnson",
+    "affiliation": "University of Illinois at Urbana-Champaign"
+  },
+  {
+    "title": "BetterSpeak: An Atypical Speech to Typical Speech Platform for Dysarthric Speakers",
+    "authors": "Seyed Reza Shahamiri",
+    "affiliation": "The University of Auckland"
+  }
+]
