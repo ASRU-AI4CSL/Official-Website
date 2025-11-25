@@ -18,8 +18,8 @@
     "role": "Invited Speaker",
     "image": "https://drive.google.com/file/d/1wHuxAlizjJ3o_imZrR3IQCLVdmHOAGNv/view?usp=drive_link",
     "website": "https://speechtechnology.web.illinois.edu/mark-a-hasegawa-johnson/",
-    "talkTitle": "Invited Talk 1 – [TBD]",
-    "talkDescription": "Invited talk. Title to be announced.",
+    "talkTitle": "Speech as a modality for the characterization and adaptation of neurodiversity",
+    "talkDescription": "Parents without medical expertise may seek help to integrate their children into home life, school, and society. Neuromotor conditions such as cerebral palsy (CP) and Down syndrome (DS) are typically diagnosed prenatally or at birth, but may generate challenges later; conditions such as apnea, anxiety, autism, and developmental language delay may remain undetected until their behavioral correlates have caused problems. Artificial intelligence has the potential to characterize neurodiversity early in life, and to adapt its behavior in order to help the child and her parents learn together. Wearables such as Littlebeats (TM) have been shown to discriminate sleep versus waking, and monologue versus dialogue infant vocalizations; with these abilities, an infant wearable has the potential to detect behavioral disorders early in life, and to help the parents find accommodations. Accurate tests of developmental language delay exist for children 3-5 years of age, and professional speech and language treatments have been shown to improve outcomes: automatic speech recognition (ASR) for young children has the potential to make these treatments available to all children who need them. Thanks to the Speech Accessibility Project, ASR error rates for adults with Parkinson's disease halved this year, and there is reason to believe that similarly large improvements for adults with CP and DS could help grant them better access to economic and social opportunities.  In these and other ways, artificially intelligent speaking agents have the potential to bridge gaps in society, and improve inter-human interaction.",
     "time": "14:35–15:05",
     "room": "CC308"
   },
