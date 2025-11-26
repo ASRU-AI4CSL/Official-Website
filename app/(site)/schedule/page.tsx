@@ -7,6 +7,9 @@ import { workshopDate } from '../../../lib/dates'
 export const metadata = { title: 'Schedule — Child Speech AI Workshop' }
 
 export default function Page() {
+  const toAnchor = (value: string) =>
+    value.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '') || value
+
   return (
     <>
       <Hero
@@ -34,6 +37,9 @@ export default function Page() {
               const displayImage = isTalk && speakerData?.image ? speakerData.image : e.image
               const displaySpeaker = speakerData?.name || (isTalk && 'speaker' in e ? e.speaker : undefined)
               const displayAffiliation = speakerData?.affiliation
+              const anchorId = isTalk
+                ? `talk-${toAnchor(speakerData?.slug || speakerCandidates[0] || displayTitle || `item-${idx}`)}`
+                : undefined
 
               const ImageEl = displayImage ? (
                 <div>
@@ -101,7 +107,7 @@ export default function Page() {
               ) : ItemGrid
 
               return (
-                <div key={idx} className="relative mb-10 lg:mb-14">
+                <div key={idx} id={anchorId} className="relative mb-10 lg:mb-14 scroll-mt-24">
 
                   {/* Center dot on desktop */}
                   <div className={`hidden lg:flex items-center justify-center absolute left-1/2 -translate-x-1/2 top-3 w-4 h-4 rounded-full bg-white border-2 border-orange-400`} />
