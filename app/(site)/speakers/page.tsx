@@ -65,7 +65,7 @@ export default function Page() {
                         Personal Website
                       </a>
                       <Link
-                        href={`/schedule#${scheduleAnchor}` as Route}
+                        href={{ pathname: '/schedule', hash: scheduleAnchor }}
                         className="block w-full text-center border border-orange-200 text-orange-700 font-semibold py-2 px-4 rounded-lg hover:bg-orange-50 transition-colors duration-200"
                       >
                         View Talk on Schedule
