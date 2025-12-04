@@ -69,7 +69,7 @@ export default function Page() {
                   {displayAffiliation && (
                     <p className="text-sm text-gray-600 mb-5">{displayAffiliation}</p>
                   )}
-                  <p className="text-gray-700 leading-relaxed text-lg lg:text-xl max-w-lg mx-auto lg:mx-0">
+                  <p className="text-gray-700 leading-relaxed text-lg lg:text-xl max-w-lg mx-auto lg:mx-0 text-left">
                     {displayDesc}
                   </p>
                 </div>

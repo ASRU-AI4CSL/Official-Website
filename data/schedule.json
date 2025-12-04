@@ -62,12 +62,52 @@
     "image": ""
   },
   {
-    "time": "16:50–18:20",
-    "type": "session",
-    "title": "Poster Session",
-    "description": "Poster presentations and discussion with presenters.",
+    "time": "16:50–17:05",
+    "type": "talk",
+    "title": "K-FUNCTION: JOINT PRONUNCIATION TRANSCRIPTION AND FEEDBACK FOR EVALUATING KIDS LANGUAGE FUNCTION",
+    "description": "Chenxu Guo, Shuhe Li, Jiachen Lian, Cheol Jun Cho, Elise Brenner, Francesca Pei, Maria Luisa Gorno-Tempini, Gopala Anumanchipalli — Zhejiang University, UC Berkeley, UCSF",
     "room": "CC308",
-    "image": "https://drive.google.com/file/d/1-ho3J9pjPtpPEQj7HhjiO4gVLSmVSDBN/view?usp=drive_link"
+    "image": ""
+  },
+  {
+    "time": "17:05–17:20",
+    "type": "talk",
+    "title": "Comparing Unsupervised and Supervised Semantic Speech Tokens: A Case Study of Child ASR",
+    "description": "Mohan Shi, Natarajan Balaji Shankar, Kaiyuan Zhang, Zilai Wang, Abeer Alwan — University of California Los Angeles",
+    "room": "CC308",
+    "image": ""
+  },
+  {
+    "time": "17:20–17:35",
+    "type": "talk",
+    "title": "CAN LARGE AUDIO LANGUAGE MODELS UNDERSTAND CHILD STUTTERING SPEECH? SPEECH SUMMARIZATION, AND SOURCE SEPARATION",
+    "description": "Chibuzor Okocha, Maya Bakri, Christan Grant — University of Florida, Lebanese American University",
+    "room": "CC308",
+    "image": ""
+  },
+  {
+    "time": "17:35–17:50",
+    "type": "talk",
+    "title": "Group-Aware Partial Model Merging for Children’s Automatic Speech recognition",
+    "description": "Thomas Rolland, Alberto Abad — INESC-ID, Universidade de Lisboa",
+    "room": "CC308",
+    "image": ""
+  },
+  {
+    "time": "17:50–18:05",
+    "type": "talk",
+    "title": "TICL+: A CASE STUDY ON SPEECH IN-CONTEXT LEARNING FOR CHILDREN’S SPEECH RECOGNITION",
+    "description": "Haolong Zheng, Yekaterina Yegorova, Mark Hasegawa-Johnson — University of Illinois at Urbana-Champaign",
+    "room": "CC308",
+    "image": ""
+  },
+  {
+    "time": "18:05–18:20",
+    "type": "talk",
+    "title": "BetterSpeak: An Atypical Speech to Typical Speech Platform for Dysarthric Speakers",
+    "description": "Seyed Reza Shahamiri — The University of Auckland",
+    "room": "CC308",
+    "image": ""
   },
   {
     "time": "18:20–18:30",

@@ -68,6 +68,31 @@ export default function Page() {
         </div>
       </section>
 
+      {/* Presentation logistics */}
+      <section className="py-12 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="max-w-5xl mx-auto bg-gray-50 rounded-3xl border border-gray-100 p-8 md:p-10 space-y-6">
+            <div className="space-y-2">
+              <p className="text-xs uppercase tracking-[0.2em] text-rose-400 font-semibold">Session logistics</p>
+              <h3 className="text-3xl font-bold text-gray-900">Accepted papers session (oral)</h3>
+              <p className="text-gray-700">
+                All six accepted papers will be delivered as oral presentations in CC308, with the same slots reflected
+                in the poster rotation.
+              </p>
+            </div>
+            <div className="space-y-4">
+              <ul className="list-disc list-inside text-gray-700 space-y-2">
+                <li>Time: 16:50–18:20 (six back-to-back 15-minute slots).</li>
+                <li>Talk length: 10–12 minutes plus Q&A within each slot.</li>
+                <li>Ordering: papers scheduled by paper ID.</li>
+                <li>Mode: presentations are planned in person; remote delivery can be accommodated upon request.</li>
+                <li>One paper may be presented by a designated presenter who is not an author.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Appreciation */}
       <section className="py-12 bg-white">
         <div className="container mx-auto px-4">

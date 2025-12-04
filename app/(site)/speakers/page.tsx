@@ -17,7 +17,7 @@ export default function Page() {
       {/* Speakers Grid */}
       <section className="py-16">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 gap-8 max-w-5xl mx-auto">
             {speakers.map(speaker => {
               const scheduleAnchor = `talk-${speaker.slug}`
               const scheduleHref = `/schedule#${scheduleAnchor}`
@@ -31,7 +31,7 @@ export default function Page() {
                     <ExternalImage 
                       src={speaker.image} 
                       alt={speaker.name}
-                      className="w-full h-64 object-cover"
+                      className="w-full h-64 object-contain bg-white"
                       width={1200}
                       height={800}
                     />
@@ -41,18 +41,19 @@ export default function Page() {
                         {speaker.role}
                       </span>
                     </div>
-                  </div>
+                </div>
 
-                  {/* Speaker Info */}
-                  <div className="p-6 flex flex-col h-full">
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">{speaker.name}</h3>
-                    <p className="text-orange-600 font-medium mb-4">{speaker.affiliation}</p>
-                    
-                    {/* Talk Info */}
-                    <div className="mb-6 flex-grow space-y-1">
-                      <h4 className="text-lg font-semibold text-gray-800">{speaker.talkTitle}</h4>
-                      <p className="text-sm text-gray-600">{speaker.time} • {speaker.room}</p>
-                    </div>
+                {/* Speaker Info */}
+                <div className="p-6 flex flex-col h-full">
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">{speaker.name}</h3>
+                  <p className="text-orange-600 font-medium mb-4">{speaker.affiliation}</p>
+                  <p className="text-gray-700 text-sm leading-relaxed mb-5">{speaker.bio}</p>
+                  
+                  {/* Talk Info */}
+                  <div className="mb-6 flex-grow space-y-1">
+                    <h4 className="text-lg font-semibold text-gray-800">{speaker.talkTitle}</h4>
+                    <p className="text-sm text-gray-600">{speaker.time} • {speaker.room}</p>
+                  </div>
                     
                     {/* Buttons at bottom */}
                     <div className="mt-auto flex flex-col gap-3">

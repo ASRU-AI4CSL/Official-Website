@@ -5,6 +5,7 @@ export interface Speaker {
   slug: string
   name: string
   affiliation: string
+  bio: string
   role: string
   image: string
   website: string
